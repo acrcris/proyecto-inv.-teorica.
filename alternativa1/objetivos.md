@@ -96,3 +96,4 @@ https://arxiv.org/html/2406.19614v1?utm_source=chatgpt.com
 - Informe (10–15 págs) con tabla comparativa, ablation plots y análisis de dinámica.
 - Carpeta de scripts para reproducir: train/eval/plots, con README y seeds.
 - Visualizaciones de trayectorias de osciladores y ejemplos resueltos/fallidos.
+

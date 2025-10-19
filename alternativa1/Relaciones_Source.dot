@@ -1,0 +1,122 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style=rounded];
+  "source.data.datasets.objs.clevr_tex.CLEVRTEX" [label="CLEVRTEX
+[source.data.datasets.objs.clevr_tex]"];
+  "source.data.datasets.objs.clevr_tex.CLEVRTEXPair" [label="CLEVRTEXPair
+[source.data.datasets.objs.clevr_tex]"];
+  "source.data.datasets.objs.clevr_tex.CLEVRTEX_Evaluator" [label="CLEVRTEX_Evaluator
+[source.data.datasets.objs.clevr_tex]"];
+  "source.data.datasets.objs.clevr_tex.DatasetReadError" [label="DatasetReadError
+[source.data.datasets.objs.clevr_tex]"];
+  "source.data.datasets.objs.clevr_tex.RunningMean" [label="RunningMean
+[source.data.datasets.objs.clevr_tex]"];
+  "source.data.datasets.objs.coco.COCO2017Dataset" [label="COCO2017Dataset
+[source.data.datasets.objs.coco]"];
+  "source.data.datasets.objs.coco.COCOCollater" [label="COCOCollater
+[source.data.datasets.objs.coco]"];
+  "source.data.datasets.objs.coco.COCOTransforms" [label="COCOTransforms
+[source.data.datasets.objs.coco]"];
+  "source.data.datasets.objs.coco.CenterCrop" [label="CenterCrop
+[source.data.datasets.objs.coco]"];
+  "source.data.datasets.objs.coco.Normalize" [label="Normalize
+[source.data.datasets.objs.coco]"];
+  "source.data.datasets.objs.coco.RandomHorizontalFlip" [label="RandomHorizontalFlip
+[source.data.datasets.objs.coco]"];
+  "source.data.datasets.objs.coco.ResizeMinShape" [label="ResizeMinShape
+[source.data.datasets.objs.coco]"];
+  "source.data.datasets.objs.imagenet.ImageNetPair" [label="ImageNetPair
+[source.data.datasets.objs.imagenet]"];
+  "source.data.datasets.objs.npdataset.NumpyDataset" [label="NumpyDataset
+[source.data.datasets.objs.npdataset]"];
+  "source.data.datasets.objs.npdataset.PairDataset" [label="PairDataset
+[source.data.datasets.objs.npdataset]"];
+  "source.data.datasets.objs.pascal.PascalDataset" [label="PascalDataset
+[source.data.datasets.objs.pascal]"];
+  "source.data.datasets.sudoku.sudoku.HardSudokuDataset" [label="HardSudokuDataset
+[source.data.datasets.sudoku.sudoku]"];
+  "source.data.datasets.sudoku.sudoku.SudokuDataset" [label="SudokuDataset
+[source.data.datasets.sudoku.sudoku]"];
+  "source.layers.common_layers.Attention" [label="Attention
+[source.layers.common_layers]"];
+  "source.layers.common_layers.BNReLUConv2d" [label="BNReLUConv2d
+[source.layers.common_layers]"];
+  "source.layers.common_layers.FF" [label="FF
+[source.layers.common_layers]"];
+  "source.layers.common_layers.FeatureAttention" [label="FeatureAttention
+[source.layers.common_layers]"];
+  "source.layers.common_layers.Interpolate" [label="Interpolate
+[source.layers.common_layers]"];
+  "source.layers.common_layers.LayerNormForImage" [label="LayerNormForImage
+[source.layers.common_layers]"];
+  "source.layers.common_layers.PatchEmbedding" [label="PatchEmbedding
+[source.layers.common_layers]"];
+  "source.layers.common_layers.RGBNormalize" [label="RGBNormalize
+[source.layers.common_layers]"];
+  "source.layers.common_layers.ReadOutConv" [label="ReadOutConv
+[source.layers.common_layers]"];
+  "source.layers.common_layers.ResBlock" [label="ResBlock
+[source.layers.common_layers]"];
+  "source.layers.common_layers.Reshape" [label="Reshape
+[source.layers.common_layers]"];
+  "source.layers.common_layers.ScaleAndBias" [label="ScaleAndBias
+[source.layers.common_layers]"];
+  "source.layers.klayer.KLayer" [label="KLayer
+[source.layers.klayer]"];
+  "source.layers.klayer.OmegaLayer" [label="OmegaLayer
+[source.layers.klayer]"];
+  "source.layers.kutils.Normalize" [label="Normalize
+[source.layers.kutils]"];
+  "source.models.classification.knet.AKOrN" [label="AKOrN
+[source.models.classification.knet]"];
+  "source.models.objs.knet.AKOrN" [label="AKOrN
+[source.models.objs.knet]"];
+  "source.models.objs.pretrained_vits.ViTWrapper" [label="ViTWrapper
+[source.models.objs.pretrained_vits]"];
+  "source.models.objs.vit.TransformerBlock" [label="TransformerBlock
+[source.models.objs.vit]"];
+  "source.models.objs.vit.ViT" [label="ViT
+[source.models.objs.vit]"];
+  "source.models.sudoku.knet.SudokuAKOrN" [label="SudokuAKOrN
+  [source.models.sudoku.knet]"];
+  "source.models.sudoku.transformer.SudokuTransformer" [label="SudokuTransformer
+[source.models.sudoku.transformer]"];
+  "source.models.sudoku.transformer.TransformerBlock" [label="TransformerBlock
+[source.models.sudoku.transformer]"];
+  "source.training_utils.LinearWarmupScheduler" [label="LinearWarmupScheduler
+[source.training_utils]"];
+  "source.data.datasets.objs.clevr_tex.CLEVRTEXPair" -> "source.data.datasets.objs.clevr_tex.CLEVRTEX" [label="hereda"];
+  "source.data.datasets.objs.npdataset.PairDataset" -> "source.data.datasets.objs.npdataset.NumpyDataset" [label="hereda"];
+  "source.data.datasets.objs.clevr_tex.CLEVRTEX" -> "source.data.datasets.objs.clevr_tex.DatasetReadError" [label="usa"];
+  "source.data.datasets.objs.coco.COCOTransforms" -> "source.data.datasets.objs.coco.CenterCrop" [label="usa"];
+  "source.data.datasets.objs.coco.COCOTransforms" -> "source.data.datasets.objs.coco.ResizeMinShape" [label="usa"];
+  "source.layers.common_layers.FF" -> "source.layers.common_layers.BNReLUConv2d" [label="usa"];
+  "source.layers.klayer.KLayer" -> "source.layers.common_layers.Attention" [label="usa"];
+  "source.layers.klayer.KLayer" -> "source.layers.common_layers.ScaleAndBias" [label="usa"];
+  "source.layers.klayer.KLayer" -> "source.layers.klayer.OmegaLayer" [label="usa"];
+  "source.models.classification.knet.AKOrN" -> "source.layers.common_layers.BNReLUConv2d" [label="usa"];
+  "source.models.classification.knet.AKOrN" -> "source.layers.common_layers.FF" [label="usa"];
+  "source.models.classification.knet.AKOrN" -> "source.layers.common_layers.RGBNormalize" [label="usa"];
+  "source.models.classification.knet.AKOrN" -> "source.layers.common_layers.ReadOutConv" [label="usa"];
+  "source.models.classification.knet.AKOrN" -> "source.layers.common_layers.ResBlock" [label="usa"];
+  "source.models.classification.knet.AKOrN" -> "source.layers.common_layers.Reshape" [label="usa"];
+  "source.models.classification.knet.AKOrN" -> "source.layers.klayer.KLayer" [label="usa"];
+  "source.models.objs.knet.AKOrN" -> "source.layers.common_layers.RGBNormalize" [label="usa"];
+  "source.models.objs.knet.AKOrN" -> "source.layers.common_layers.ReadOutConv" [label="usa"];
+  "source.models.objs.knet.AKOrN" -> "source.layers.common_layers.Reshape" [label="usa"];
+  "source.models.objs.knet.AKOrN" -> "source.layers.klayer.KLayer" [label="usa"];
+  "source.models.objs.pretrained_vits.ViTWrapper" -> "source.layers.common_layers.RGBNormalize" [label="usa"];
+  "source.models.objs.vit.TransformerBlock" -> "source.layers.common_layers.Attention" [label="usa"];
+  "source.models.objs.vit.TransformerBlock" -> "source.layers.common_layers.LayerNormForImage" [label="usa"];
+  "source.models.objs.vit.ViT" -> "source.layers.common_layers.LayerNormForImage" [label="usa"];
+  "source.models.objs.vit.ViT" -> "source.layers.common_layers.RGBNormalize" [label="usa"];
+  "source.models.objs.vit.ViT" -> "source.layers.common_layers.Reshape" [label="usa"];
+  "source.models.objs.vit.ViT" -> "source.models.objs.vit.TransformerBlock" [label="usa"];
+  "source.models.sudoku.knet.SudokuAKOrN" -> "source.layers.common_layers.BNReLUConv2d" [label="usa"];
+  "source.models.sudoku.knet.SudokuAKOrN" -> "source.layers.common_layers.FF" [label="usa"];
+  "source.models.sudoku.knet.SudokuAKOrN" -> "source.layers.common_layers.ReadOutConv" [label="usa"];
+  "source.models.sudoku.knet.SudokuAKOrN" -> "source.layers.common_layers.ResBlock" [label="usa"];
+  "source.models.sudoku.knet.SudokuAKOrN" -> "source.layers.klayer.KLayer" [label="usa"];
+  "source.models.sudoku.transformer.SudokuTransformer" -> "source.models.sudoku.transformer.TransformerBlock" [label="usa"];
+  "source.models.sudoku.transformer.TransformerBlock" -> "source.layers.common_layers.Attention" [label="usa"];
+}

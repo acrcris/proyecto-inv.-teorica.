@@ -1,0 +1,29 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, style=rounded];
+
+  SudokuAKOrN [label="SudokuAKOrN"];
+  "nn.Module" [label="nn.Module"];
+  KLayer [label="KLayer"];
+  ReadOutConv [label="ReadOutConv"];
+  ResBlock [label="ResBlock"];
+  FF [label="FF"];
+  BNReLUConv2d [label="BNReLUConv2d"];
+  "nn.Sequential" [label="nn.Sequential"];
+  "nn.ModuleList" [label="nn.ModuleList"];
+  "nn.Embedding" [label="nn.Embedding"];
+  "nn.Conv2d" [label="nn.Conv2d"];
+  "nn.ReLU" [label="nn.ReLU"];
+
+  SudokuAKOrN -> "nn.Module" [label="hereda"];
+  SudokuAKOrN -> KLayer [label="compone (×L)"];
+  SudokuAKOrN -> ReadOutConv [label="compone"];
+  SudokuAKOrN -> ResBlock [label="compone (si nl)"];
+  ResBlock -> FF [label="usa"];
+  SudokuAKOrN -> BNReLUConv2d [label="compone (si nl)"];
+  SudokuAKOrN -> "nn.Sequential" [label="usa"];
+  SudokuAKOrN -> "nn.ModuleList" [label="usa"];
+  SudokuAKOrN -> "nn.Embedding" [label="usa"];
+  SudokuAKOrN -> "nn.Conv2d" [label="usa"];
+  SudokuAKOrN -> "nn.ReLU" [label="usa"];
+}

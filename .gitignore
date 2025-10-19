@@ -1,0 +1,28 @@
+# Archivos del sistema
+.DS_Store
+*.zip
+
+# Código y datos pesados
+alternativa1/codigo/
+alternativa1/outputs/
+alternativa1/outputs copy/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+
+# Checkpoints y modelos entrenados
+*.pth
+*.pt
+*.ckpt
