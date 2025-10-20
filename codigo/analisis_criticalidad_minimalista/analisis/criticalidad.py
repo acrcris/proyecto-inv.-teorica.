@@ -163,13 +163,84 @@ class MutualInformation:
     """Cálculo de información mutua entre dos series."""
     @staticmethod
     def mutual_info(x, y, bins=32):
-        Hxy, _, _ = np.histogram2d(x, y, bins=bins)
-        pxy = Hxy / Hxy.sum()
-        px = pxy.sum(axis=1)
-        py = pxy.sum(axis=0)
-        eps = 1e-12
-        I = np.nansum(pxy * (np.log(pxy+eps) - np.log(px[:,None]+eps) - np.log(py[None,:]+eps)))
-        return I
+        """
+        Calcula información mutua entre dos series temporales.
+        
+        Args:
+            x: primera serie (array 1D)
+            y: segunda serie (array 1D)
+            bins: número de bins para histograma 2D
+            
+        Returns:
+            MI: información mutua en nats
+        """
+        # Convertir a numpy y aplanar
+        x = np.asarray(x).ravel()
+        y = np.asarray(y).ravel()
+        
+        # Validar longitudes
+        if len(x) != len(y):
+            min_len = min(len(x), len(y))
+            x = x[:min_len]
+            y = y[:min_len]
+        
+        # Validar que tenemos suficientes datos
+        if len(x) < 2:
+            return np.nan
+        
+        # Remover NaNs e Infs
+        mask = np.isfinite(x) & np.isfinite(y)
+        if not mask.any():
+            return np.nan
+        x = x[mask]
+        y = y[mask]
+        
+        # Verificar varianza no nula (evitar series constantes)
+        if np.std(x) < 1e-10 or np.std(y) < 1e-10:
+            return 0.0  # Series constantes tienen MI = 0
+        
+        # Calcular histograma 2D robusto
+        try:
+            # Usar rango explícito para evitar problemas con outliers
+            x_range = (np.percentile(x, 1), np.percentile(x, 99))
+            y_range = (np.percentile(y, 1), np.percentile(y, 99))
+            
+            Hxy, _, _ = np.histogram2d(x, y, bins=bins, 
+                                       range=[x_range, y_range])
+            
+            # Normalizar a probabilidades
+            total = Hxy.sum()
+            if total == 0:
+                return 0.0
+            
+            pxy = Hxy / total
+            
+            # Marginales
+            px = pxy.sum(axis=1)
+            py = pxy.sum(axis=0)
+            
+            # Calcular MI evitando log(0)
+            eps = 1e-12
+            
+            # Máscara para valores válidos (donde pxy > 0)
+            mask = pxy > eps
+            
+            # MI = sum_{x,y} p(x,y) * log( p(x,y) / (p(x)*p(y)) )
+            MI = 0.0
+            for i in range(len(px)):
+                for j in range(len(py)):
+                    if mask[i, j] and px[i] > eps and py[j] > eps:
+                        MI += pxy[i, j] * (np.log(pxy[i, j]) - np.log(px[i]) - np.log(py[j]))
+            
+            # Validar resultado
+            if not np.isfinite(MI):
+                return np.nan
+            
+            return float(MI)
+            
+        except Exception as e:
+            # En caso de cualquier error, devolver NaN
+            return np.nan
 
 class Correlacion:
     """Correlación de Pearson entre canales o series."""

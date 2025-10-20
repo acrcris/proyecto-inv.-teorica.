@@ -207,13 +207,17 @@ def calcular_metricas_imagen_completas(xs, es, idx, label):
         except:
             metricas['variance_mean'] = np.nan
         
-        # 8. Información mutua
+        # 8. Información mutua (entre primera y segunda mitad de la serie)
         try:
-            mi = MutualInformation.mutual_info(global_series[:len(global_series)//2], 
-                                               global_series[len(global_series)//2:], 
-                                               bins=20)
-            metricas['mutual_info'] = float(mi)
-        except:
+            # Dividir la serie global en dos mitades
+            mid = len(global_series) // 2
+            first_half = global_series[:mid]
+            second_half = global_series[mid:mid + len(first_half)]  # Mismo tamaño
+            
+            # Calcular MI con bins reducidos para más robustez
+            mi = MutualInformation.mutual_info(first_half, second_half, bins=16)
+            metricas['mutual_info'] = float(mi) if np.isfinite(mi) else np.nan
+        except Exception as e:
             metricas['mutual_info'] = np.nan
         
         metricas['success'] = True
