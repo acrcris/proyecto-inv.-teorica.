@@ -31,7 +31,12 @@ codigo/analisis_criticalidad_minimalista/*.log
 codigo/analisis_criticalidad_minimalista/*.pid
 
 # Resultados de análisis de Kuramoto (archivos grandes)
-codigo/analisis_criticalidad_minimalista/resultados_kuramoto_full_dataset_CORRECTED/
+# Ignorar todo el contenido por defecto, excepto carpetas de análisis
+codigo/analisis_criticalidad_minimalista/resultados_kuramoto_full_dataset_CORRECTED/*
+!codigo/analisis_criticalidad_minimalista/resultados_kuramoto_full_dataset_CORRECTED/analisis_distribuciones/
+!codigo/analisis_criticalidad_minimalista/resultados_kuramoto_full_dataset_CORRECTED/analisis_distribuciones/**
+!codigo/analisis_criticalidad_minimalista/resultados_kuramoto_full_dataset_CORRECTED/analisis_estadistico/
+!codigo/analisis_criticalidad_minimalista/resultados_kuramoto_full_dataset_CORRECTED/analisis_estadistico/**
 
 # Virtual environment
 .venv/

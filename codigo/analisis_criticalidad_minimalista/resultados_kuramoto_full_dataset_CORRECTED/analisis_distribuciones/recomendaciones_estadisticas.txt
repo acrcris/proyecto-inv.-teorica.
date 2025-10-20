@@ -1,0 +1,30 @@
+
+═══════════════════════════════════════════════════════════════════════════════
+                    RECOMENDACIONES ESTADÍSTICAS
+═══════════════════════════════════════════════════════════════════════════════
+
+Fecha: 2025-10-20 14:31:08
+
+1. ANÁLISIS TEMPORAL
+─────────────────────────────────────────────────────────────────────────────
+
+Momentos normales: 0/101 (0%)
+
+⚠ RECOMENDACIÓN: Usar MEDIANA para describir evolución temporal de R
+  Muchos momentos temporales NO presentan distribución normal.
+
+2. ANÁLISIS POR CLASE
+────────────────────────────────────────────────────────────────────────────────
+
+Clase 0: ⚠ Usar MEDIANA (Md=0.5418 [0.4929, 0.5804])
+Clase 1: ⚠ Usar MEDIANA (Md=0.6874 [0.5683, 0.7304])
+Clase 2: ⚠ Usar MEDIANA (Md=0.5760 [0.5289, 0.6159])
+Clase 3: ⚠ Usar MEDIANA (Md=0.5821 [0.5348, 0.6224])
+Clase 4: ⚠ Usar MEDIANA (Md=0.6267 [0.5881, 0.6573])
+Clase 5: ⚠ Usar MEDIANA (Md=0.5988 [0.5484, 0.6349])
+Clase 6: ⚠ Usar MEDIANA (Md=0.5948 [0.5462, 0.6342])
+Clase 7: ⚠ Usar MEDIANA (Md=0.6423 [0.6058, 0.6724])
+Clase 8: ⚠ Usar MEDIANA (Md=0.5733 [0.5268, 0.6087])
+Clase 9: ⚠ Usar MEDIANA (Md=0.6261 [0.5886, 0.6546])
+
+================================================================================
