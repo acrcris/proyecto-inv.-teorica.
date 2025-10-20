@@ -24,12 +24,15 @@ ENV/
 
 # Checkpoints y modelos entrenados
 *.pth
-*.pt
 *.ckpt
 
 # Logs y procesos del módulo de criticalidad
 codigo/analisis_criticalidad_minimalista/*.log
 codigo/analisis_criticalidad_minimalista/*.pid
 
+# Resultados de análisis de Kuramoto (archivos grandes)
+codigo/analisis_criticalidad_minimalista/resultados_kuramoto_full_dataset_CORRECTED/
+
 # Virtual environment
 .venv/
+codigo/analisis_criticalidad_minimalista/resultados_kuramoto_por_clase/

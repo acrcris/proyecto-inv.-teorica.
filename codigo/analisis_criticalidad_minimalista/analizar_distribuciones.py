@@ -37,7 +37,7 @@ def cargar_datos():
         sys.exit(1)
     
     print(f"📂 Cargando datos desde: {data_path}")
-    data = torch.load(data_path)
+    data = torch.load(data_path, weights_only=False)
     
     metricas = data['metricas']
     T_steps = data['T_steps']

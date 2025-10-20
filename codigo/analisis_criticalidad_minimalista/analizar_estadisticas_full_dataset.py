@@ -27,13 +27,13 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # Configuración
-RESULTS_DIR = "resultados_kuramoto_full_dataset"
+RESULTS_DIR = "resultados_kuramoto_full_dataset_CORRECTED"
 ANALYSIS_DIR = os.path.join(RESULTS_DIR, "analisis_estadistico")
 os.makedirs(ANALYSIS_DIR, exist_ok=True)
 
 def cargar_datos():
     """Carga las métricas desde el archivo guardado."""
-    data_path = os.path.join(RESULTS_DIR, 'metricas_completas.pt')
+    data_path = os.path.join(RESULTS_DIR, 'metricas_completas_CORRECTED.pt')
     
     if not os.path.exists(data_path):
         print(f"❌ Error: No se encontró {data_path}")
@@ -41,7 +41,7 @@ def cargar_datos():
         sys.exit(1)
     
     print(f"📂 Cargando datos desde: {data_path}")
-    data = torch.load(data_path)
+    data = torch.load(data_path, weights_only=False)
     
     metricas = data['metricas']
     parametros = data['parametros']
