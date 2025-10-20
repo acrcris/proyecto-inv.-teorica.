@@ -84,16 +84,26 @@ def calcular_metricas_imagen_completas(xs, es, idx, label):
     try:
         # 1. Parámetro de orden de Kuramoto - SERIE COMPLETA
         R_series = KuramotoMetrics.order_parameter(xs, ch_pair=(0, 1))
-        metricas['R_series'] = R_series.cpu().numpy()  # Array de 101 valores
+        if torch.is_tensor(R_series):
+            R_series = R_series.cpu().numpy()
+        metricas['R_series'] = R_series  # Array de 101 valores
         metricas['R_length'] = len(R_series)
         
         # 2. Series temporales de magnitud - COMPLETA
         series = KuramotoMetrics.magnitudes_mean_series(xs)
+        if torch.is_tensor(series):
+            series = series.cpu().numpy()
         global_series = series.mean(axis=1)
+        if torch.is_tensor(global_series):
+            global_series = global_series.cpu().numpy()
         metricas['global_series'] = global_series  # Array de 101 valores
         
         # 3. Energías - SERIE COMPLETA
-        metricas['energy_series'] = es.cpu().numpy()  # Array de 101 valores
+        if torch.is_tensor(es):
+            es_numpy = es.cpu().numpy()
+        else:
+            es_numpy = np.array(es)
+        metricas['energy_series'] = es_numpy  # Array de 101 valores
         
         # 4. DFA - guardamos alpha pero también los datos para recalcular
         try:
@@ -129,6 +139,8 @@ def calcular_metricas_imagen_completas(xs, es, idx, label):
         
         # 7. Correlación - MATRIZ COMPLETA (sin promediar)
         corr_matrix = Correlacion.pearson_matrix(series)
+        if torch.is_tensor(corr_matrix):
+            corr_matrix = corr_matrix.cpu().numpy()
         metricas['correlation_matrix'] = corr_matrix
         
         # 8. Información Mutua - MATRIZ COMPLETA (sin promediar)
@@ -140,7 +152,10 @@ def calcular_metricas_imagen_completas(xs, es, idx, label):
         metricas['MI_matrix'] = MI
         
         # 9. Varianza temporal - SERIE COMPLETA
-        metricas['variance_series'] = np.var(series, axis=1)  # Varianza por tiempo
+        variance_series = np.var(series, axis=1)  # Varianza por tiempo
+        if torch.is_tensor(variance_series):
+            variance_series = variance_series.cpu().numpy()
+        metricas['variance_series'] = variance_series
         
         metricas['success'] = True
         

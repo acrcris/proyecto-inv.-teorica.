@@ -30,11 +30,11 @@ fi
 
 # Mostrar checkpoints guardados
 echo "💾 Checkpoints guardados:"
-if [ -d "resultados_kuramoto_full_dataset/checkpoints" ]; then
-    CHECKPOINTS=$(ls resultados_kuramoto_full_dataset/checkpoints/*.pt 2>/dev/null | wc -l)
+if [ -d "resultados_kuramoto_full_dataset_CORRECTED/checkpoints" ]; then
+    CHECKPOINTS=$(ls resultados_kuramoto_full_dataset_CORRECTED/checkpoints/*.pt 2>/dev/null | wc -l)
     echo "   Total: $CHECKPOINTS archivos"
     if [ $CHECKPOINTS -gt 0 ]; then
-        ULTIMO=$(ls -t resultados_kuramoto_full_dataset/checkpoints/*.pt 2>/dev/null | head -1)
+        ULTIMO=$(ls -t resultados_kuramoto_full_dataset_CORRECTED/checkpoints/*.pt 2>/dev/null | head -1)
         echo "   Último: $(basename $ULTIMO)"
         IMAGENES=$((CHECKPOINTS * 100))
         PROGRESO=$((IMAGENES * 100 / 10000))
@@ -48,7 +48,10 @@ echo ""
 # Mostrar últimas líneas del log
 echo "📝 Últimas líneas del log:"
 echo "----------------------------------------"
-LOG_FILE=$(ls -t resultados_kuramoto_full_dataset/run_*.log 2>/dev/null | head -1)
+LOG_FILE=$(ls -t resultados_kuramoto_full_dataset_CORRECTED/run_*.log 2>/dev/null | head -1)
+if [ ! -f "$LOG_FILE" ]; then
+    LOG_FILE=$(ls -t resultados_kuramoto_full_dataset/run_*.log 2>/dev/null | head -1)
+fi
 if [ -f "$LOG_FILE" ]; then
     tail -15 "$LOG_FILE"
 else
