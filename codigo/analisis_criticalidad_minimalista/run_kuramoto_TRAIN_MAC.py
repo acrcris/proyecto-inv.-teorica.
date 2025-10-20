@@ -87,6 +87,22 @@ def get_device():
 
 DEVICE, DEVICE_NAME = get_device()
 
+def _shannon_entropy(arr: np.ndarray, bins: int = 64) -> float:
+    """Entropía de Shannon (bits) de un arreglo 1D usando histogramas.
+    No promedia temporalmente; pensado para un frame y un canal.
+    """
+    x = np.asarray(arr).ravel()
+    if x.size == 0:
+        return np.nan
+    # Histograma robusto: si todos iguales, evita log(0)
+    counts, _ = np.histogram(x, bins=bins)
+    total = counts.sum()
+    if total == 0:
+        return np.nan
+    p = counts[counts > 0].astype(np.float64) / total
+    return float(-(p * np.log2(p)).sum())
+
+
 def calcular_metricas_imagen_completas(xs, es, idx, label):
     """
     Calcula métricas SIN promediar prematuramente.
@@ -116,6 +132,7 @@ def calcular_metricas_imagen_completas(xs, es, idx, label):
         # Valores resumen (para visualización rápida)
         metricas['R_init'] = float(R_series[0])
         metricas['R_final'] = float(R_series[-1])
+        metricas['R_stationary'] = float(R_series[-1])  # Alias explícito requerido
         
         # 2. Serie global de sincronización - SERIE TEMPORAL COMPLETA
         series = KuramotoMetrics.serie_temporal(xs)
@@ -126,6 +143,31 @@ def calcular_metricas_imagen_completas(xs, es, idx, label):
             global_series = global_series.cpu().numpy()
         metricas['global_sync_series'] = global_series  # Array temporal
         
+        # 2b. Magnitud media por canal en estado estacionario (frame final)
+        # xs tiene forma (T+1, C, H, W). Tomamos el último frame (estado estacionario)
+        try:
+            x_final = xs[-1]
+            if torch.is_tensor(x_final):
+                x_final = x_final.cpu().numpy()
+            # Magnitud promedio espacial por canal
+            # |x| por canal -> media en HxW
+            mag_ch = np.mean(np.abs(x_final), axis=(1, 2))  # shape (C,)
+            metricas['mag_channel_mean_final'] = mag_ch.astype(np.float32)
+        except Exception:
+            metricas['mag_channel_mean_final'] = None
+
+        # 2c. Entropía de Shannon por canal (estado estacionario)
+        try:
+            x_final = xs[-1]
+            if torch.is_tensor(x_final):
+                x_final = x_final.cpu().numpy()
+            entropias = [
+                _shannon_entropy(x_final[c], bins=64) for c in range(x_final.shape[0])
+            ]
+            metricas['shannon_entropy_by_channel'] = np.asarray(entropias, dtype=np.float32)
+        except Exception:
+            metricas['shannon_entropy_by_channel'] = None
+
         # 3. Entropía espectral - SERIE TEMPORAL COMPLETA
         if torch.is_tensor(es):
             es = es.cpu().numpy()
