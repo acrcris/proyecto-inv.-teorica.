@@ -43,7 +43,7 @@ def _to_json_array(x: Any) -> str:
 
 
 def cargar_metricas() -> Dict[str, Any]:
-    data = torch.load(FINAL_FILE)
+    data = torch.load(FINAL_FILE, weights_only=False)
     return data
 
 
