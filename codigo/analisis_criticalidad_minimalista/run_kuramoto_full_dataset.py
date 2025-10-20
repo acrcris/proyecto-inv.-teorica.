@@ -27,7 +27,7 @@ from datetime import datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from kuramoto.modelo import KBlock
-from datasets.loader import DatasetFactory
+from datasets.loader import MNISTLoader
 from analisis.criticalidad import (
     KuramotoMetrics,
     DFA,
@@ -47,12 +47,13 @@ os.makedirs(METRICS_DIR, exist_ok=True)
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
 # Parámetros del modelo Kuramoto
-CH = 4          # Canales
-N = 4           # Dimensión (1 oscilador de 4D por píxel)
-T = 100         # Pasos de integración
-GAMMA = 0.7     # Acoplamiento
-DEL_T = 0.9     # Paso temporal
-IMG_SIZE = 64   # Tamaño de imagen
+CH = 4              # Canales
+N = 4               # Dimensión (1 oscilador de 4D por píxel)
+T_STEPS = 100       # Pasos de integración
+T_MODEL = 4         # Parámetro T de KBlock
+KSIZE = 7           # Tamaño de kernel convolucional
+INIT_OMG = 0.1      # Frecuencia natural inicial
+IMG_SIZE = 64       # Tamaño de imagen
 
 # Control de checkpoints
 CHECKPOINT_INTERVAL = 100  # Guardar checkpoint cada 100 imágenes
@@ -62,14 +63,20 @@ def calcular_metricas_imagen(xs, es, idx, label):
     Calcula todas las métricas de criticalidad para una imagen.
     
     Args:
-        xs: Estados de posición (T+1, CH, N, H, W)
-        es: Estados de momentum (T+1, CH, N, H, W)
+        xs: Estados de posición (lista o tensor: T+1, B, CH, H, W)
+        es: Estados de energía (lista o tensor: T+1)
         idx: Índice de la imagen
         label: Etiqueta de la imagen
     
     Returns:
         dict: Diccionario con todas las métricas
     """
+    # Convertir listas a tensors si es necesario
+    if isinstance(xs, list):
+        xs = torch.stack([x.detach() if x.requires_grad else x for x in xs])
+    if isinstance(es, list):
+        es = torch.tensor([e.detach().item() if torch.is_tensor(e) else e for e in es])
+    
     metricas = {
         'idx': idx,
         'label': int(label),
@@ -176,20 +183,21 @@ def main():
     
     # Cargar dataset
     print("📂 Cargando dataset MNIST...")
-    dataset_factory = DatasetFactory(root='./data', img_size=IMG_SIZE)
-    _, test_loader = dataset_factory.get_mnist(batch_size=1, train_split=False)
+    mnist_loader = MNISTLoader(root='./data', batch_size=1, img_size=IMG_SIZE)
+    _, test_loader = mnist_loader.get_mnist(batch_size=1, train_split=False)
     total_images = len(test_loader.dataset)
     print(f"✅ Dataset cargado: {total_images:,} imágenes en test set")
     print()
     
     # Inicializar modelo Kuramoto
     print("🧠 Inicializando modelo Kuramoto...")
-    kblock = KBlock(ch=CH, n=N, gamma=GAMMA, del_t=DEL_T)
+    kblock = KBlock(n=N, ch=CH, T=T_MODEL, ksize=KSIZE, init_omg=INIT_OMG)
     print(f"   - Canales: {CH}")
     print(f"   - Dimensión: {N}")
-    print(f"   - Pasos temporales: {T}")
-    print(f"   - Gamma: {GAMMA}")
-    print(f"   - Delta t: {DEL_T}")
+    print(f"   - Pasos temporales: {T_STEPS}")
+    print(f"   - T (modelo): {T_MODEL}")
+    print(f"   - Kernel size: {KSIZE}")
+    print(f"   - Init omega: {INIT_OMG}")
     print()
     
     # Intentar cargar checkpoint previo
@@ -227,21 +235,15 @@ def main():
                 continue
             
             try:
+                # Preparar imagen como campo de acoplamiento
+                c = image.repeat(1, CH, 1, 1)  # Replicar a CH canales
+                
+                # Estado inicial aleatorio
+                x = torch.randn(1, CH, IMG_SIZE, IMG_SIZE)
+                
                 # Ejecutar dinámica de Kuramoto
-                xs_list = []
-                es_list = []
-                
-                x, e = kblock.init(image)
-                xs_list.append(x.clone())
-                es_list.append(e.clone())
-                
-                for t in range(T):
-                    x, e = kblock.forward_dynamics(x, e)
-                    xs_list.append(x.clone())
-                    es_list.append(e.clone())
-                
-                xs = torch.stack(xs_list)
-                es = torch.stack(es_list)
+                x_final, xs, es = kblock(x, c, T=T_STEPS, gamma=0.7, del_t=0.9, 
+                                        return_xs=True, return_es=True)
                 
                 # Calcular métricas
                 metricas = calcular_metricas_imagen(xs, es, idx, label.item())
@@ -292,9 +294,10 @@ def main():
         'parametros': {
             'ch': CH,
             'n': N,
-            'T': T,
-            'gamma': GAMMA,
-            'del_t': DEL_T,
+            'T_steps': T_STEPS,
+            'T_model': T_MODEL,
+            'ksize': KSIZE,
+            'init_omg': INIT_OMG,
             'img_size': IMG_SIZE
         },
         'fecha': datetime.now().isoformat()

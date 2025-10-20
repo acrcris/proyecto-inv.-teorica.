@@ -26,3 +26,7 @@ ENV/
 *.pth
 *.pt
 *.ckpt
+
+# Logs y procesos del módulo de criticalidad
+codigo/analisis_criticalidad_minimalista/*.log
+codigo/analisis_criticalidad_minimalista/*.pid
