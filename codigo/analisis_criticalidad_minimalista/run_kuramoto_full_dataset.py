@@ -1,18 +1,25 @@
 """
-Script: run_kuramoto_full_dataset.py
+Script: run_kuramoto_full_dataset_CORRECTED.py
 
-FASE 2.1 - Análisis con múltiples imágenes por clase
+VERSIÓN CORREGIDA - Sin promedios prematuros
 
-Ejecuta la dinámica de Kuramoto sobre TODO el test set de MNIST (10,000 imágenes).
-Para cada imagen:
-- Ejecuta KBlock con T=100 pasos
-- Guarda estados de evolución
-- Calcula métricas de criticalidad
+CORRECCIÓN METODOLÓGICA:
+========================
+En lugar de guardar:
+  R_mean = mean(R(t))  ← 1 valor por imagen
 
-ADVERTENCIA: Este proceso puede tomar varias horas dependiendo del hardware.
-Se recomienda ejecutar en modo background o usar nohup.
+Guardamos:
+  R_series = [R(t=0), R(t=1), ..., R(t=100)]  ← 101 valores por imagen
 
-Resultados guardados en: resultados_kuramoto_full_dataset/
+Esto permite:
+  1. Analizar la distribución REAL de R en cada momento t
+  2. Decidir si usar media/mediana DESPUÉS de verificar normalidad
+  3. Análisis temporal completo de la dinámica
+
+Para 10,000 imágenes × 101 pasos temporales = 1,010,000 valores de R
+Esto sí permite análisis robusto de distribuciones.
+
+ADVERTENCIA: Archivos más grandes (~500 MB vs ~50 MB)
 """
 
 import os
@@ -38,40 +45,31 @@ from analisis.criticalidad import (
 )
 
 # Configuración
-RESULTS_DIR = "resultados_kuramoto_full_dataset"
-METRICS_DIR = os.path.join(RESULTS_DIR, "metricas")
+RESULTS_DIR = "resultados_kuramoto_full_dataset_CORRECTED"
 CHECKPOINT_DIR = os.path.join(RESULTS_DIR, "checkpoints")
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
-os.makedirs(METRICS_DIR, exist_ok=True)
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
 # Parámetros del modelo Kuramoto
-CH = 4              # Canales
-N = 4               # Dimensión (1 oscilador de 4D por píxel)
-T_STEPS = 100       # Pasos de integración
-T_MODEL = 4         # Parámetro T de KBlock
-KSIZE = 7           # Tamaño de kernel convolucional
-INIT_OMG = 0.1      # Frecuencia natural inicial
-IMG_SIZE = 64       # Tamaño de imagen
+CH = 4
+N = 4
+T_STEPS = 100
+T_MODEL = 4
+KSIZE = 7
+INIT_OMG = 0.1
+IMG_SIZE = 64
 
-# Control de checkpoints
-CHECKPOINT_INTERVAL = 100  # Guardar checkpoint cada 100 imágenes
+CHECKPOINT_INTERVAL = 100
 
-def calcular_metricas_imagen(xs, es, idx, label):
+def calcular_metricas_imagen_completas(xs, es, idx, label):
     """
-    Calcula todas las métricas de criticalidad para una imagen.
+    Calcula métricas SIN promediar prematuramente.
+    Guarda series temporales completas.
     
-    Args:
-        xs: Estados de posición (lista o tensor: T+1, B, CH, H, W)
-        es: Estados de energía (lista o tensor: T+1)
-        idx: Índice de la imagen
-        label: Etiqueta de la imagen
-    
-    Returns:
-        dict: Diccionario con todas las métricas
+    CORRECCIÓN: En lugar de R_mean, guardamos R_series completa
     """
-    # Convertir listas a tensors si es necesario
+    # Convertir a tensors
     if isinstance(xs, list):
         xs = torch.stack([x.detach() if x.requires_grad else x for x in xs])
     if isinstance(es, list):
@@ -84,61 +82,65 @@ def calcular_metricas_imagen(xs, es, idx, label):
     }
     
     try:
-        # 1. Parámetro de orden de Kuramoto
-        R = KuramotoMetrics.order_parameter(xs, ch_pair=(0, 1))
-        metricas['R_mean'] = float(R.mean())
-        metricas['R_std'] = float(R.std())
-        metricas['R_min'] = float(R.min())
-        metricas['R_max'] = float(R.max())
-        metricas['R_final'] = float(R[-1])
+        # 1. Parámetro de orden de Kuramoto - SERIE COMPLETA
+        R_series = KuramotoMetrics.order_parameter(xs, ch_pair=(0, 1))
+        metricas['R_series'] = R_series.cpu().numpy()  # Array de 101 valores
+        metricas['R_length'] = len(R_series)
         
-        # 2. Series temporales de magnitud
+        # 2. Series temporales de magnitud - COMPLETA
         series = KuramotoMetrics.magnitudes_mean_series(xs)
         global_series = series.mean(axis=1)
+        metricas['global_series'] = global_series  # Array de 101 valores
         
-        # 3. DFA
+        # 3. Energías - SERIE COMPLETA
+        metricas['energy_series'] = es.cpu().numpy()  # Array de 101 valores
+        
+        # 4. DFA - guardamos alpha pero también los datos para recalcular
         try:
             scales, F, alpha = DFA.dfa(global_series)
             metricas['DFA_alpha'] = float(alpha)
+            metricas['DFA_scales'] = scales
+            metricas['DFA_F'] = F
         except Exception as e:
             metricas['DFA_alpha'] = np.nan
             metricas['DFA_error'] = str(e)
         
-        # 4. PSD
+        # 5. PSD - guardamos slope pero también los datos para recalcular
         try:
             f, Pxx, slope = PSD.psd_slope(global_series)
             metricas['PSD_slope'] = float(slope)
+            metricas['PSD_freqs'] = f
+            metricas['PSD_power'] = Pxx
         except Exception as e:
             metricas['PSD_slope'] = np.nan
             metricas['PSD_error'] = str(e)
         
-        # 5. Entropía de Shannon
+        # 6. Entropía - SERIE POR CANAL (sin promediar)
         if isinstance(xs, list):
             xs_tensor = torch.stack(xs)
         else:
             xs_tensor = xs
         entropy_results = Entropia.entropy_analysis(xs_tensor)
-        entropias = [v['Entropía de Shannon'] for v in entropy_results.values()]
-        metricas['Entropia_mean'] = float(np.mean(entropias))
-        metricas['Entropia_std'] = float(np.std(entropias))
         
-        # 6. Correlación
+        # Guardar entropía por canal, no promediada
+        metricas['entropy_by_channel'] = {
+            k: v['Entropía de Shannon'] for k, v in entropy_results.items()
+        }
+        
+        # 7. Correlación - MATRIZ COMPLETA (sin promediar)
         corr_matrix = Correlacion.pearson_matrix(series)
-        mask = ~np.eye(corr_matrix.shape[0], dtype=bool)
-        metricas['Corr_mean'] = float(corr_matrix[mask].mean())
-        metricas['Corr_std'] = float(corr_matrix[mask].std())
+        metricas['correlation_matrix'] = corr_matrix
         
-        # 7. Información Mutua
+        # 8. Información Mutua - MATRIZ COMPLETA (sin promediar)
         ch_count = series.shape[1]
         MI = np.zeros((ch_count, ch_count))
         for i in range(ch_count):
             for j in range(ch_count):
                 MI[i, j] = MutualInformation.mutual_info(series[:, i], series[:, j])
-        metricas['MI_mean'] = float(MI[mask].mean())
-        metricas['MI_std'] = float(MI[mask].std())
+        metricas['MI_matrix'] = MI
         
-        # 8. Varianza de la serie
-        metricas['Variance'] = float(global_series.var())
+        # 9. Varianza temporal - SERIE COMPLETA
+        metricas['variance_series'] = np.var(series, axis=1)  # Varianza por tiempo
         
         metricas['success'] = True
         
@@ -149,22 +151,24 @@ def calcular_metricas_imagen(xs, es, idx, label):
     return metricas
 
 def guardar_checkpoint(metricas_acumuladas, idx):
-    """Guarda un checkpoint con las métricas acumuladas hasta el momento."""
+    """Guarda checkpoint - archivos grandes debido a series completas."""
     checkpoint_path = os.path.join(CHECKPOINT_DIR, f'checkpoint_{idx:05d}.pt')
     torch.save({
         'metricas': metricas_acumuladas,
         'last_idx': idx,
         'timestamp': datetime.now().isoformat()
     }, checkpoint_path)
-    print(f"  💾 Checkpoint guardado: {checkpoint_path}")
+    
+    # Calcular tamaño
+    size_mb = os.path.getsize(checkpoint_path) / 1024 / 1024
+    print(f"  💾 Checkpoint guardado: {checkpoint_path} ({size_mb:.1f} MB)")
 
 def cargar_ultimo_checkpoint():
-    """Carga el último checkpoint disponible, si existe."""
+    """Carga el último checkpoint."""
     checkpoints = [f for f in os.listdir(CHECKPOINT_DIR) if f.startswith('checkpoint_')]
     if not checkpoints:
         return None, 0
     
-    # Ordenar por índice y tomar el último
     checkpoints.sort()
     ultimo = checkpoints[-1]
     checkpoint_path = os.path.join(CHECKPOINT_DIR, ultimo)
@@ -176,8 +180,18 @@ def cargar_ultimo_checkpoint():
 def main():
     """Función principal."""
     print("="*70)
-    print("FASE 2.1 - ANÁLISIS CON TODO EL TEST SET DE MNIST")
+    print("VERSIÓN CORREGIDA - SIN PROMEDIOS PREMATUROS")
     print("="*70)
+    print()
+    print("📊 CORRECCIÓN METODOLÓGICA:")
+    print("  ✗ Antes: Guardábamos R_mean = mean(R(t))")
+    print("  ✓ Ahora: Guardamos R_series = [R(t=0), R(t=1), ..., R(t=100)]")
+    print()
+    print("  Esto permite:")
+    print("  1. Analizar distribución REAL sin colapsar datos")
+    print("  2. Decidir media vs mediana DESPUÉS de verificar normalidad")
+    print("  3. Análisis temporal completo de la dinámica")
+    print()
     print(f"Fecha de inicio: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
     
@@ -189,18 +203,15 @@ def main():
     print(f"✅ Dataset cargado: {total_images:,} imágenes en test set")
     print()
     
-    # Inicializar modelo Kuramoto
+    # Inicializar modelo
     print("🧠 Inicializando modelo Kuramoto...")
     kblock = KBlock(n=N, ch=CH, T=T_MODEL, ksize=KSIZE, init_omg=INIT_OMG)
-    print(f"   - Canales: {CH}")
-    print(f"   - Dimensión: {N}")
     print(f"   - Pasos temporales: {T_STEPS}")
-    print(f"   - T (modelo): {T_MODEL}")
-    print(f"   - Kernel size: {KSIZE}")
-    print(f"   - Init omega: {INIT_OMG}")
+    print(f"   - Por imagen: {T_STEPS+1} valores de R(t)")
+    print(f"   - Total dataset: {total_images * (T_STEPS+1):,} valores de R")
     print()
     
-    # Intentar cargar checkpoint previo
+    # Intentar cargar checkpoint
     metricas_acumuladas, start_idx = cargar_ultimo_checkpoint()
     if metricas_acumuladas is None:
         metricas_acumuladas = []
@@ -211,57 +222,48 @@ def main():
         print(f"   Ya procesadas: {len(metricas_acumuladas)} imágenes")
     print()
     
-    # Estimación de tiempo
-    print("⏱️  ESTIMACIÓN DE TIEMPO:")
-    print("   - Tiempo por imagen: ~1-2 segundos")
-    print(f"   - Tiempo total estimado: {(total_images - start_idx) * 1.5 / 3600:.1f} horas")
-    print(f"   - Checkpoints cada: {CHECKPOINT_INTERVAL} imágenes")
+    # Estimación
+    print("⏱️  ESTIMACIÓN:")
+    print("   - Tiempo por imagen: ~1.5 segundos")
+    print(f"   - Tiempo total: {(total_images - start_idx) * 1.5 / 3600:.1f} horas")
+    print(f"   - Tamaño final estimado: ~500 MB (vs ~50 MB versión promediada)")
     print()
     
     print("="*70)
-    print("PROCESANDO IMÁGENES...")
+    print("PROCESANDO...")
     print("="*70)
     
     start_time = time.time()
     
-    # Procesar todas las imágenes
     with tqdm(total=total_images, initial=start_idx, desc="Procesando", 
               unit="img", ncols=100) as pbar:
         
         for idx, (image, label) in enumerate(test_loader):
             
-            # Si ya procesamos esta imagen en un checkpoint previo, saltarla
             if idx < start_idx:
                 continue
             
             try:
-                # Preparar imagen como campo de acoplamiento
-                c = image.repeat(1, CH, 1, 1)  # Replicar a CH canales
-                
-                # Estado inicial aleatorio
+                c = image.repeat(1, CH, 1, 1)
                 x = torch.randn(1, CH, IMG_SIZE, IMG_SIZE)
                 
-                # Ejecutar dinámica de Kuramoto
                 x_final, xs, es = kblock(x, c, T=T_STEPS, gamma=0.7, del_t=0.9, 
                                         return_xs=True, return_es=True)
                 
-                # Calcular métricas
-                metricas = calcular_metricas_imagen(xs, es, idx, label.item())
+                # Calcular métricas COMPLETAS (sin promediar)
+                metricas = calcular_metricas_imagen_completas(xs, es, idx, label.item())
                 metricas_acumuladas.append(metricas)
                 
-                # Actualizar barra de progreso
                 pbar.update(1)
                 pbar.set_postfix({
                     'Clase': label.item(),
-                    'R': f"{metricas.get('R_mean', 0):.3f}",
-                    'DFA': f"{metricas.get('DFA_alpha', 0):.3f}"
+                    'R_init': f"{metricas['R_series'][0]:.3f}",
+                    'R_final': f"{metricas['R_series'][-1]:.3f}"
                 })
                 
-                # Guardar checkpoint periódicamente
                 if (idx + 1) % CHECKPOINT_INTERVAL == 0:
                     guardar_checkpoint(metricas_acumuladas, idx)
                     
-                    # Mostrar estadísticas parciales
                     elapsed = time.time() - start_time
                     processed = idx - start_idx + 1
                     rate = processed / elapsed
@@ -269,7 +271,7 @@ def main():
                     
                     print(f"\n  📊 Progreso: {idx+1}/{total_images} ({100*(idx+1)/total_images:.1f}%)")
                     print(f"  ⏱️  Velocidad: {rate:.2f} img/s")
-                    print(f"  ⏰ Tiempo restante estimado: {remaining:.2f} horas\n")
+                    print(f"  ⏰ Tiempo restante: {remaining:.2f} horas\n")
                 
             except Exception as e:
                 print(f"\n⚠️  Error en imagen {idx}: {e}")
@@ -287,10 +289,11 @@ def main():
     print("GUARDANDO RESULTADOS FINALES...")
     print("="*70)
     
-    final_path = os.path.join(RESULTS_DIR, 'metricas_completas.pt')
+    final_path = os.path.join(RESULTS_DIR, 'metricas_completas_CORRECTED.pt')
     torch.save({
         'metricas': metricas_acumuladas,
         'total_images': total_images,
+        'T_steps': T_STEPS,
         'parametros': {
             'ch': CH,
             'n': N,
@@ -302,40 +305,30 @@ def main():
         },
         'fecha': datetime.now().isoformat()
     }, final_path)
-    print(f"✅ Métricas guardadas: {final_path}")
     
-    # Estadísticas finales
-    elapsed_total = time.time() - start_time
-    successful = sum(1 for m in metricas_acumuladas if m.get('success', False))
-    failed = len(metricas_acumuladas) - successful
+    size_mb = os.path.getsize(final_path) / 1024 / 1024
+    print(f"✅ Resultados guardados: {final_path} ({size_mb:.1f} MB)")
     
-    print("\n" + "="*70)
-    print("ESTADÍSTICAS FINALES")
+    # Estadísticas
+    exitosas = sum(1 for m in metricas_acumuladas if m.get('success', False))
+    print()
     print("="*70)
-    print(f"Total de imágenes: {len(metricas_acumuladas):,}")
-    print(f"Exitosas: {successful:,} ({100*successful/len(metricas_acumuladas):.1f}%)")
-    print(f"Fallidas: {failed:,} ({100*failed/len(metricas_acumuladas):.1f}%)")
-    print(f"Tiempo total: {elapsed_total/3600:.2f} horas")
-    print(f"Velocidad promedio: {len(metricas_acumuladas)/elapsed_total:.2f} img/s")
-    print()
-    
-    # Distribución por clase
-    print("Distribución por clase:")
-    labels_procesadas = [m['label'] for m in metricas_acumuladas if m.get('success', False)]
-    for clase in range(10):
-        count = labels_procesadas.count(clase)
-        print(f"  Clase {clase}: {count:,} imágenes")
-    
-    print("\n" + "="*70)
-    print("PROCESAMIENTO COMPLETADO ✅")
+    print("RESUMEN")
     print("="*70)
-    print(f"Fecha de finalización: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Total procesadas: {len(metricas_acumuladas):,}")
+    print(f"Exitosas: {exitosas:,} ({100*exitosas/len(metricas_acumuladas):.1f}%)")
+    print(f"Total valores de R: {exitosas * (T_STEPS+1):,}")
+    print(f"Tiempo total: {(time.time()-start_time)/3600:.2f} horas")
     print()
-    print("📁 Resultados guardados en:")
-    print(f"   {RESULTS_DIR}/")
+    print("📊 DATOS GUARDADOS SIN PROMEDIAR:")
+    print("  • R_series: 101 valores por imagen")
+    print("  • global_series: 101 valores por imagen")
+    print("  • energy_series: 101 valores por imagen")
+    print("  • correlation_matrix: Matriz completa")
+    print("  • MI_matrix: Matriz completa")
     print()
-    print("🔬 Siguiente paso: Ejecutar análisis estadístico con:")
-    print("   python analizar_estadisticas_full_dataset.py")
+    print("✓ Ahora se puede analizar la distribución CORRECTAMENTE")
+    print("="*70)
 
 if __name__ == "__main__":
     main()

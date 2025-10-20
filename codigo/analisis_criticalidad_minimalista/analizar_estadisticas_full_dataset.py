@@ -20,6 +20,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
+from scipy.stats import norm, shapiro, kstest, anderson
 from datetime import datetime
 
 # Agregar el path del módulo
@@ -351,12 +352,23 @@ TOP 5 CANDIDATOS A CRITICALIDAD:
 
 ARCHIVOS GENERADOS:
 ─────────────────────────────────────────────────────────────────────────────
+Estadísticas descriptivas:
 • estadisticas_por_clase.csv       - Estadísticas completas por clase
 • tests_significancia.csv           - Tests ANOVA entre clases
 • ranking_criticalidad.csv          - Ranking de candidatos críticos
+
+Análisis de normalidad:
+• tests_normalidad.csv              - Tests Shapiro-Wilk, KS, Anderson-Darling
+• resumen_normalidad.txt            - Interpretación de normalidad
+
+Visualizaciones:
 • distribuciones_boxplot.pdf        - Box plots de todas las métricas
 • distribuciones_violin.pdf         - Violin plots de métricas clave
 • medias_por_clase.pdf              - Gráficas de medias con error estándar
+• histogramas_*.pdf                 - Histogramas con ajuste gaussiano (6 archivos)
+• qqplots_*.pdf                     - Q-Q plots para verificar normalidad (6 archivos)
+
+Resúmenes:
 • resumen_ejecutivo.txt             - Este archivo
 
 CONCLUSIONES:
@@ -378,6 +390,317 @@ CONCLUSIONES:
     print(f"✅ Resumen guardado: {txt_path}")
     print()
 
+def analizar_normalidad(df):
+    """
+    Analiza la normalidad de las distribuciones de cada métrica.
+    
+    Aplica tres tests estadísticos:
+    - Shapiro-Wilk: Sensible a desviaciones de normalidad
+    - Kolmogorov-Smirnov: Compara con distribución normal teórica
+    - Anderson-Darling: Más sensible en las colas
+    
+    Calcula también:
+    - Asimetría (skewness): 0 = simétrica, >0 = cola derecha, <0 = cola izquierda
+    - Curtosis (kurtosis): 3 = gaussiana, >3 = colas pesadas, <3 = colas ligeras
+    """
+    print("📊 Analizando normalidad de las distribuciones...")
+    print()
+    
+    metricas_interes = ['R_mean', 'DFA_alpha', 'PSD_slope', 'Entropia_mean', 
+                        'Corr_mean', 'MI_mean']
+    
+    resultados_normalidad = []
+    
+    for clase in range(10):
+        df_clase = df[df['label'] == clase]
+        
+        for metrica in metricas_interes:
+            valores = df_clase[metrica].dropna().values
+            
+            if len(valores) < 3:
+                continue
+            
+            # Test de Shapiro-Wilk (H0: distribución normal)
+            # p > 0.05 → No rechazar H0 → Posiblemente normal
+            if len(valores) <= 5000:  # Shapiro-Wilk limitado a 5000 muestras
+                stat_shapiro, p_shapiro = shapiro(valores)
+            else:
+                # Para muestras grandes, usar una submuestra aleatoria
+                muestra = np.random.choice(valores, size=5000, replace=False)
+                stat_shapiro, p_shapiro = shapiro(muestra)
+            
+            # Test de Kolmogorov-Smirnov con media y std empíricas
+            # Normalizar los datos
+            valores_norm = (valores - valores.mean()) / valores.std()
+            stat_ks, p_ks = kstest(valores_norm, 'norm')
+            
+            # Test de Anderson-Darling
+            result_anderson = anderson(valores, dist='norm')
+            # Significancia al 5% (índice 2 corresponde a 5%)
+            anderson_critical_5 = result_anderson.critical_values[2]
+            anderson_rechaza = result_anderson.statistic > anderson_critical_5
+            
+            # Asimetría y Curtosis
+            skew = stats.skew(valores)
+            kurt = stats.kurtosis(valores, fisher=True)  # fisher=True → exceso de curtosis (0=gaussiana)
+            
+            resultados_normalidad.append({
+                'Clase': clase,
+                'Metrica': metrica,
+                'N': len(valores),
+                'Media': valores.mean(),
+                'Std': valores.std(),
+                'Shapiro_stat': stat_shapiro,
+                'Shapiro_p': p_shapiro,
+                'Shapiro_normal': 'Sí' if p_shapiro > 0.05 else 'No',
+                'KS_stat': stat_ks,
+                'KS_p': p_ks,
+                'KS_normal': 'Sí' if p_ks > 0.05 else 'No',
+                'Anderson_stat': result_anderson.statistic,
+                'Anderson_critical_5%': anderson_critical_5,
+                'Anderson_normal': 'Sí' if not anderson_rechaza else 'No',
+                'Skewness': skew,
+                'Kurtosis': kurt
+            })
+    
+    df_normalidad = pd.DataFrame(resultados_normalidad)
+    
+    # Guardar resultados
+    csv_path = os.path.join(ANALYSIS_DIR, 'tests_normalidad.csv')
+    df_normalidad.to_csv(csv_path, index=False)
+    print(f"✅ Tests de normalidad guardados: {csv_path}")
+    
+    # Resumen por métrica
+    print("\n📊 RESUMEN DE NORMALIDAD POR MÉTRICA:")
+    print("─" * 80)
+    for metrica in metricas_interes:
+        df_met = df_normalidad[df_normalidad['Metrica'] == metrica]
+        n_shapiro_normal = (df_met['Shapiro_normal'] == 'Sí').sum()
+        n_ks_normal = (df_met['KS_normal'] == 'Sí').sum()
+        n_anderson_normal = (df_met['Anderson_normal'] == 'Sí').sum()
+        total = len(df_met)
+        
+        print(f"\n{metrica}:")
+        print(f"  Shapiro-Wilk:    {n_shapiro_normal}/{total} clases son normales ({100*n_shapiro_normal/total:.0f}%)")
+        print(f"  Kolmogorov-Smirnov: {n_ks_normal}/{total} clases son normales ({100*n_ks_normal/total:.0f}%)")
+        print(f"  Anderson-Darling:   {n_anderson_normal}/{total} clases son normales ({100*n_anderson_normal/total:.0f}%)")
+        print(f"  Asimetría promedio: {df_met['Skewness'].mean():+.3f} (0=simétrica)")
+        print(f"  Curtosis promedio:  {df_met['Kurtosis'].mean():+.3f} (0=gaussiana)")
+    
+    print()
+    return df_normalidad
+
+def visualizar_histogramas_normalidad(df, df_normalidad):
+    """
+    Genera histogramas con ajuste gaussiano para cada métrica y clase.
+    Permite verificar visualmente si los datos siguen una distribución normal.
+    """
+    print("📊 Generando histogramas con ajuste gaussiano...")
+    
+    metricas_interes = ['R_mean', 'DFA_alpha', 'PSD_slope', 'Entropia_mean', 
+                        'Corr_mean', 'MI_mean']
+    
+    for metrica in metricas_interes:
+        fig, axes = plt.subplots(2, 5, figsize=(20, 8))
+        fig.suptitle(f'Distribuciones de {metrica} por Clase con Ajuste Gaussiano', 
+                     fontsize=16, fontweight='bold')
+        
+        axes = axes.flatten()
+        
+        for clase in range(10):
+            ax = axes[clase]
+            
+            # Datos de esta clase
+            df_clase = df[df['label'] == clase]
+            valores = df_clase[metrica].dropna().values
+            
+            # Histograma
+            n, bins, patches = ax.hist(valores, bins=30, density=True, 
+                                       alpha=0.7, color='steelblue', 
+                                       edgecolor='black', linewidth=0.5)
+            
+            # Ajuste gaussiano
+            mu, sigma = valores.mean(), valores.std()
+            x = np.linspace(valores.min(), valores.max(), 100)
+            gauss_fit = norm.pdf(x, mu, sigma)
+            ax.plot(x, gauss_fit, 'r-', linewidth=2, label=f'N({mu:.3f}, {sigma:.3f})')
+            
+            # Información del test de normalidad
+            df_norm_clase = df_normalidad[
+                (df_normalidad['Clase'] == clase) & 
+                (df_normalidad['Metrica'] == metrica)
+            ]
+            
+            if len(df_norm_clase) > 0:
+                row = df_norm_clase.iloc[0]
+                shapiro_normal = row['Shapiro_normal']
+                p_value = row['Shapiro_p']
+                skew = row['Skewness']
+                kurt = row['Kurtosis']
+                
+                # Color del título según normalidad
+                color = 'green' if shapiro_normal == 'Sí' else 'red'
+                ax.set_title(f'Clase {clase} (N={len(valores)})\n'
+                            f'Shapiro p={p_value:.4f}\n'
+                            f'Skew={skew:+.2f}, Kurt={kurt:+.2f}',
+                            color=color, fontsize=9)
+            else:
+                ax.set_title(f'Clase {clase} (N={len(valores)})', fontsize=9)
+            
+            ax.set_xlabel(metrica, fontsize=8)
+            ax.set_ylabel('Densidad', fontsize=8)
+            ax.legend(fontsize=7, loc='upper right')
+            ax.grid(True, alpha=0.3)
+            ax.tick_params(labelsize=7)
+        
+        plt.tight_layout()
+        pdf_path = os.path.join(ANALYSIS_DIR, f'histogramas_{metrica}.pdf')
+        plt.savefig(pdf_path, format='pdf', dpi=150, bbox_inches='tight')
+        plt.close()
+        
+        print(f"  ✅ {pdf_path}")
+    
+    print()
+
+def visualizar_qq_plots(df, df_normalidad):
+    """
+    Genera Q-Q plots (cuantil-cuantil) para verificar normalidad.
+    Si los puntos caen sobre la línea diagonal, la distribución es normal.
+    """
+    print("📊 Generando Q-Q plots...")
+    
+    metricas_interes = ['R_mean', 'DFA_alpha', 'PSD_slope', 'Entropia_mean', 
+                        'Corr_mean', 'MI_mean']
+    
+    for metrica in metricas_interes:
+        fig, axes = plt.subplots(2, 5, figsize=(20, 8))
+        fig.suptitle(f'Q-Q Plots de {metrica} por Clase', 
+                     fontsize=16, fontweight='bold')
+        
+        axes = axes.flatten()
+        
+        for clase in range(10):
+            ax = axes[clase]
+            
+            # Datos de esta clase
+            df_clase = df[df['label'] == clase]
+            valores = df_clase[metrica].dropna().values
+            
+            # Q-Q plot
+            stats.probplot(valores, dist="norm", plot=ax)
+            
+            # Información del test de normalidad
+            df_norm_clase = df_normalidad[
+                (df_normalidad['Clase'] == clase) & 
+                (df_normalidad['Metrica'] == metrica)
+            ]
+            
+            if len(df_norm_clase) > 0:
+                row = df_norm_clase.iloc[0]
+                shapiro_normal = row['Shapiro_normal']
+                p_value = row['Shapiro_p']
+                
+                # Color del título según normalidad
+                color = 'green' if shapiro_normal == 'Sí' else 'red'
+                ax.set_title(f'Clase {clase} - Shapiro p={p_value:.4f}',
+                            color=color, fontsize=9)
+            else:
+                ax.set_title(f'Clase {clase}', fontsize=9)
+            
+            ax.grid(True, alpha=0.3)
+            ax.tick_params(labelsize=7)
+        
+        plt.tight_layout()
+        pdf_path = os.path.join(ANALYSIS_DIR, f'qqplots_{metrica}.pdf')
+        plt.savefig(pdf_path, format='pdf', dpi=150, bbox_inches='tight')
+        plt.close()
+        
+        print(f"  ✅ {pdf_path}")
+    
+    print()
+
+def resumen_normalidad_global(df_normalidad):
+    """Genera un resumen textual del análisis de normalidad."""
+    print("📝 Generando resumen de normalidad...")
+    
+    resumen = """
+═══════════════════════════════════════════════════════════════════════════════
+                    ANÁLISIS DE NORMALIDAD - FASE 2.1
+═══════════════════════════════════════════════════════════════════════════════
+
+INTERPRETACIÓN DE TESTS:
+─────────────────────────────────────────────────────────────────────────────
+• Shapiro-Wilk (p-value):
+  - p > 0.05: NO se rechaza H0 → Datos posiblemente normales
+  - p ≤ 0.05: Se rechaza H0 → Datos NO son normales
+  
+• Kolmogorov-Smirnov (p-value):
+  - p > 0.05: NO se rechaza H0 → Datos posiblemente normales
+  - p ≤ 0.05: Se rechaza H0 → Datos NO son normales
+  
+• Anderson-Darling (estadístico vs valor crítico):
+  - stat < critical_value: Datos posiblemente normales
+  - stat ≥ critical_value: Datos NO son normales
+
+• Asimetría (Skewness):
+  - ≈ 0: Distribución simétrica (ideal para gaussiana)
+  - > 0: Cola hacia la derecha (asimetría positiva)
+  - < 0: Cola hacia la izquierda (asimetría negativa)
+
+• Curtosis (Kurtosis exceso):
+  - ≈ 0: Curtosis similar a gaussiana
+  - > 0: Colas más pesadas que gaussiana (leptocúrtica)
+  - < 0: Colas más ligeras que gaussiana (platicúrtica)
+
+"""
+    
+    metricas_interes = ['R_mean', 'DFA_alpha', 'PSD_slope', 'Entropia_mean', 
+                        'Corr_mean', 'MI_mean']
+    
+    resumen += "\nRESUMEN POR MÉTRICA:\n"
+    resumen += "─" * 80 + "\n"
+    
+    for metrica in metricas_interes:
+        df_met = df_normalidad[df_normalidad['Metrica'] == metrica]
+        
+        n_shapiro_normal = (df_met['Shapiro_normal'] == 'Sí').sum()
+        n_ks_normal = (df_met['KS_normal'] == 'Sí').sum()
+        n_anderson_normal = (df_met['Anderson_normal'] == 'Sí').sum()
+        total = len(df_met)
+        
+        skew_mean = df_met['Skewness'].mean()
+        skew_std = df_met['Skewness'].std()
+        kurt_mean = df_met['Kurtosis'].mean()
+        kurt_std = df_met['Kurtosis'].std()
+        
+        resumen += f"\n{metrica.upper()}:\n"
+        resumen += f"  Normalidad según tests:\n"
+        resumen += f"    - Shapiro-Wilk:      {n_shapiro_normal}/{total} clases ({100*n_shapiro_normal/total:.0f}%)\n"
+        resumen += f"    - Kolmogorov-Smirnov: {n_ks_normal}/{total} clases ({100*n_ks_normal/total:.0f}%)\n"
+        resumen += f"    - Anderson-Darling:   {n_anderson_normal}/{total} clases ({100*n_anderson_normal/total:.0f}%)\n"
+        resumen += f"  Forma de la distribución:\n"
+        resumen += f"    - Asimetría: {skew_mean:+.3f} ± {skew_std:.3f}\n"
+        resumen += f"    - Curtosis:  {kurt_mean:+.3f} ± {kurt_std:.3f}\n"
+        
+        # Interpretación
+        if n_shapiro_normal >= 7:
+            resumen += f"  ✓ La mayoría de las clases presentan distribución normal\n"
+        elif n_shapiro_normal >= 4:
+            resumen += f"  ⚠ Algunas clases presentan desviaciones de normalidad\n"
+        else:
+            resumen += f"  ✗ La mayoría de las clases NO presentan distribución normal\n"
+    
+    resumen += "\n" + "═" * 80 + "\n"
+    
+    # Guardar
+    txt_path = os.path.join(ANALYSIS_DIR, 'resumen_normalidad.txt')
+    with open(txt_path, 'w') as f:
+        f.write(resumen)
+    
+    print(resumen)
+    print(f"✅ Resumen de normalidad guardado: {txt_path}")
+    print()
+
 def main():
     """Función principal."""
     print("="*70)
@@ -397,13 +720,25 @@ def main():
     # 4. Tests de significancia
     df_anova = tests_significancia(df)
     
-    # 5. Visualizaciones
+    # 5. Análisis de normalidad (NUEVO)
+    df_normalidad = analizar_normalidad(df)
+    
+    # 6. Visualizaciones de distribuciones
     visualizar_distribuciones(df, df_stats)
     
-    # 6. Identificar candidatos críticos
+    # 7. Histogramas con ajuste gaussiano (NUEVO)
+    visualizar_histogramas_normalidad(df, df_normalidad)
+    
+    # 8. Q-Q plots (NUEVO)
+    visualizar_qq_plots(df, df_normalidad)
+    
+    # 9. Resumen de normalidad (NUEVO)
+    resumen_normalidad_global(df_normalidad)
+    
+    # 10. Identificar candidatos críticos
     df_candidatos = identificar_candidatos_criticos(df, df_stats)
     
-    # 7. Resumen ejecutivo
+    # 11. Resumen ejecutivo
     resumen_ejecutivo(df, df_stats, df_candidatos)
     
     print("="*70)
@@ -411,6 +746,12 @@ def main():
     print("="*70)
     print()
     print(f"📁 Todos los resultados en: {ANALYSIS_DIR}/")
+    print()
+    print("📊 ARCHIVOS DE NORMALIDAD GENERADOS:")
+    print("  • tests_normalidad.csv           - Tests estadísticos completos")
+    print("  • histogramas_*.pdf              - Histogramas con ajuste gaussiano (6 archivos)")
+    print("  • qqplots_*.pdf                  - Q-Q plots por métrica (6 archivos)")
+    print("  • resumen_normalidad.txt         - Resumen interpretativo")
     print()
 
 if __name__ == "__main__":
