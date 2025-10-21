@@ -1,0 +1,175 @@
+================================================================================
+📊 RESUMEN DEL ANÁLISIS DE DISTRIBUCIONES
+Dataset: 60,002 imágenes MNIST (Training Set)
+Fecha: 21 de Octubre, 2025
+================================================================================
+
+✅ ANÁLISIS COMPLETADO EXITOSAMENTE
+
+Archivos generados:
+├── ANALISIS_DISTRIBUCIONES_RESULTADOS.md (Informe completo + interpretaciones)
+├── resultados_kuramoto_TRAIN_MAC_60k/analisis_distribuciones/
+│   ├── informe_completo_distribuciones.txt (109 KB)
+│   ├── estadisticas_descriptivas_por_clase.csv (37 KB)
+│   ├── tests_normalidad_por_clase.csv (9.5 KB)
+│   └── comparaciones_entre_clases.csv (541 B)
+└── resultados_kuramoto_TRAIN_MAC_60k/graficas_por_clase/
+    └── clase0/ ... clase9/ (60 PDFs organizados)
+
+================================================================================
+🎯 HALLAZGOS PRINCIPALES
+================================================================================
+
+1. CRITICALIDAD DEL SISTEMA
+   ✅ Parámetro R en rango de criticalidad (0.3-0.7) para TODAS las clases
+   ❌ DFA Alpha > 1.0 (esperado: 0.5-1.0) → correlaciones muy fuertes
+   ❌ PSD Slope ≈ -4 (esperado: -1) → filtrado paso-bajo excesivo
+
+2. DIFERENCIACIÓN POR CLASE
+   • Clase 1 (dígito "1"):
+     - Mayor sincronización: R = 0.6736
+     - Mayor DFA α: 1.8349 (máxima memoria)
+     - Mayor entropía: H = 5.1920
+     - Menor MI: 1.4307 (canales más independientes)
+   
+   • Clase 0 (dígito "0"):
+     - Menor sincronización: R = 0.5363
+     - Menor DFA α: 1.6718
+     - Menor entropía: H = 4.4690
+     - MI intermedia: 1.4958
+
+3. DISTRIBUCIONES NO NORMALES
+   ❌ NINGUNA métrica en NINGUNA clase sigue distribución normal
+   • Tests aplicados: Shapiro-Wilk, Anderson-Darling, K-S, D'Agostino-Pearson
+   • Todos rechazan H₀ con p < 0.05
+   • Características: asimetría negativa, kurtosis variable, colas pesadas
+
+4. DIFERENCIAS SIGNIFICATIVAS ENTRE CLASES
+   ✅ TODAS las métricas discriminan entre clases con p < 0.001
+   • ANOVA F-statistic: 327.72 - 4165.96
+   • Kruskal-Wallis H-statistic: 4474.37 - 18316.35
+   • Conclusión: Las clases son DISTINGUIBLES por métricas de criticalidad
+
+================================================================================
+📈 TABLA RESUMEN: MEDIAS POR CLASE
+================================================================================
+
+Clase  | R      | Mag    | PSD     | DFA α  | MI    | Entropía | Interpretación
+-------|--------|--------|---------|--------|-------|----------|----------------
+   0   | 0.5363 | 0.4103 | -4.0534 | 1.6718 | 1.496 | 4.469    | Menor sincronización
+   1   | 0.6736 | 0.4307 | -3.8902 | 1.8349 | 1.431 | 5.192    | MAYOR sincronización
+   2   | 0.5813 | 0.4142 | -4.0959 | 1.6835 | 1.514 | 4.483    | Sincronización baja
+   3   | 0.5892 | 0.4146 | -4.1048 | 1.6907 | 1.516 | 4.535    | Sincronización intermedia
+   4   | 0.6309 | 0.4212 | -4.1250 | 1.7113 | 1.514 | 4.627    | Sincronización alta
+   5   | 0.6072 | 0.4170 | -4.1283 | 1.7011 | 1.511 | 4.585    | Sincronización intermedia
+   6   | 0.6080 | 0.4175 | -4.0389 | 1.6924 | 1.511 | 4.478    | Sincronización intermedia
+   7   | 0.6460 | 0.4231 | -4.0858 | 1.7202 | 1.498 | 4.676    | Sincronización alta
+   8   | 0.5768 | 0.4137 | -4.0147 | 1.6801 | 1.516 | 4.414    | Sincronización baja
+   9   | 0.6291 | 0.4207 | -4.0924 | 1.7051 | 1.514 | 4.571    | Sincronización intermedia
+
+GLOBAL | 0.6089 | 0.4185 | -4.0606 | 1.7108 | 1.501 | 4.611    | Criticalidad confirmada
+
+================================================================================
+🔬 INTERPRETACIÓN FÍSICA Y TOPOLÓGICA
+================================================================================
+
+RELACIÓN TOPOLOGÍA → DINÁMICA:
+• Dígitos "simples" (1, 7): trazos verticales/diagonales → mayor sincronización
+• Dígitos "complejos" (0, 8): formas cerradas/curvas → menor sincronización
+• Correlación: complejidad visual ↔ diversidad de fases
+
+EFECTO DE PARÁMETROS:
+• γ = 0.7 (acoplamiento fuerte):
+  - Favorece sincronización local
+  - Genera correlaciones de largo alcance (DFA α > 1)
+  - Suaviza espectro (PSD slope muy negativo)
+
+• T = 100 pasos:
+  - Suficiente para convergencia
+  - Permite memoria extendida en series temporales
+
+• Kernel 7×7:
+  - Acoplamiento espacial moderado
+  - Actúa como filtro paso-bajo
+
+================================================================================
+📊 MÉTRICAS INDIVIDUALES - RANKINGS
+================================================================================
+
+PARÁMETRO R (Sincronización):
+  1. Clase 1: 0.6736  ← Mayor
+  2. Clase 7: 0.6460
+  3. Clase 4: 0.6309
+  ...
+  9. Clase 8: 0.5768
+ 10. Clase 0: 0.5363  ← Menor
+
+DFA ALPHA (Memoria):
+  1. Clase 1: 1.8349  ← Mayor
+  2. Clase 7: 1.7202
+  3. Clase 4: 1.7113
+  ...
+  9. Clase 0: 1.6718  ← Menor
+
+ENTROPÍA SHANNON:
+  1. Clase 1: 5.1920  ← Mayor
+  2. Clase 7: 4.6756
+  3. Clase 4: 4.6274
+  ...
+  9. Clase 8: 4.4136  ← Menor
+
+MUTUAL INFORMATION:
+  1. Clase 8: 1.5163  ← Mayor
+  2. Clase 3: 1.5159
+  3. Clase 2: 1.5141
+  ...
+ 10. Clase 1: 1.4307  ← Menor
+
+================================================================================
+🎓 CONCLUSIONES Y RECOMENDACIONES
+================================================================================
+
+CONCLUSIONES:
+1. ✅ El sistema Kuramoto alcanza estado crítico (R ∈ [0.3, 0.7])
+2. ✅ Las métricas de criticalidad pueden discriminar entre clases de dígitos
+3. ⚠️  DFA α y PSD slope sugieren ajustar parámetros (γ, T, kernel)
+4. ✅ Diferencias topológicas se reflejan en diferencias dinámicas
+
+RECOMENDACIONES:
+1. Explorar γ ∈ [0.3, 0.6] para DFA α más cercano a 1.0
+2. Analizar espectros para diferentes tamaños de kernel
+3. Considerar tests no paramétricos dado que distribuciones no son normales
+4. Investigar por qué clase 1 muestra comportamiento extremo
+5. Usar métricas de criticalidad para clasificación/clustering
+
+LIMITACIONES:
+• Distribuciones no normales limitan uso de tests paramétricos
+• DFA α > 1 sugiere no estacionariedad
+• PSD slope indica sobresuavizado espectral
+• Necesario validar con otros datasets (CIFAR, ImageNet)
+
+================================================================================
+📚 ARCHIVOS PARA CONSULTA DETALLADA
+================================================================================
+
+• ANALISIS_DISTRIBUCIONES_RESULTADOS.md
+  → Informe completo con todas las tablas e interpretaciones
+
+• informe_completo_distribuciones.txt
+  → Reporte técnico detallado con tests estadísticos por clase
+
+• estadisticas_descriptivas_por_clase.csv
+  → Todas las estadísticas (media, mediana, std, cv, skewness, kurtosis, etc.)
+
+• tests_normalidad_por_clase.csv
+  → Resultados completos de 4 tests de normalidad
+
+• comparaciones_entre_clases.csv
+  → ANOVA y Kruskal-Wallis para cada métrica
+
+• graficas_por_clase/claseX/
+  → 6 PDFs por clase con histogramas, Q-Q plots, boxplots y estadísticas
+
+================================================================================
+✨ FIN DEL ANÁLISIS
+================================================================================
