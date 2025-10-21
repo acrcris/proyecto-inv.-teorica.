@@ -249,7 +249,7 @@ def cargar_ultimo_checkpoint():
         return None, 0
     
     ultimo_checkpoint = os.path.join(CHECKPOINT_DIR, checkpoints[-1])
-    data = torch.load(ultimo_checkpoint)
+    data = torch.load(ultimo_checkpoint, weights_only=False)
     
     return data['metricas'], data['checkpoint_idx']
 
