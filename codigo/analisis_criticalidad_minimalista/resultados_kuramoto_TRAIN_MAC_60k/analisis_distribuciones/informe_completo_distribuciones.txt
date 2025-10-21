@@ -1,0 +1,1928 @@
+====================================================================================================
+INFORME COMPLETO: ANÁLISIS DE DISTRIBUCIONES DE MÉTRICAS DE CRITICALIDAD
+====================================================================================================
+
+Dataset: 60002 imágenes MNIST (Training Set)
+Clases analizadas: 0-9 (10 dígitos)
+Métricas principales: 6
+Métricas por canal: 8
+
+====================================================================================================
+RESUMEN EJECUTIVO
+====================================================================================================
+
+📊 R (Parámetro de Orden) - Valor Estacionario:
+  • Media global: 0.6089 ± 0.0707
+  • Clase con mayor media: 1 (0.6736)
+  • Clase con menor media: 0 (0.5363)
+  • ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+📊 Magnitud Media por Canal:
+  • Media global: 0.4185 ± 0.0175
+  • Clase con mayor media: 1 (0.4307)
+  • Clase con menor media: 0 (0.4103)
+
+📊 PSD Slope (Pendiente del Espectro de Potencia):
+  • Media global: -4.0606 ± 0.2661
+  • Clase con mayor media: 1 (-3.8902)
+  • Clase con menor media: 5 (-4.1283)
+  • ❌ FUERA DE RANGO DE CRITICALIDAD
+
+📊 DFA Alpha (Exponente de Fluctuaciones):
+  • Media global: 1.7108 ± 0.0830
+  • Clase con mayor media: 1 (1.8349)
+  • Clase con menor media: 0 (1.6718)
+  • ❌ FUERA DE RANGO DE CRITICALIDAD
+
+📊 Mutual Information (Información Mutua):
+  • Media global: 1.5011 ± 0.1195
+  • Clase con mayor media: 8 (1.5163)
+  • Clase con menor media: 1 (1.4307)
+
+📊 Entropía de Shannon (Media por Canal):
+  • Media global: 4.6111 ± 0.3535
+  • Clase con mayor media: 1 (5.1920)
+  • Clase con menor media: 8 (4.4136)
+
+
+====================================================================================================
+MÉTRICA: R (Parámetro de Orden) - Valor Estacionario
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+Clase    N        Media        Mediana      Std          Min          Max          Skew         Kurt        
+----------------------------------------------------------------------------------------------------
+0        5913     0.5363       0.5387       0.0655       0.1649       0.6989       -0.4031      0.3008      
+1        6693     0.6736       0.6979       0.0638       0.4310       0.7845       -1.5660      1.8564      
+2        5968     0.5813       0.5843       0.0621       0.3253       0.7485       -0.3686      -0.0752     
+3        6148     0.5892       0.5941       0.0628       0.3269       0.7727       -0.4848      -0.0292     
+4        5810     0.6309       0.6407       0.0496       0.3982       0.7532       -0.9193      0.7584      
+5        5467     0.6072       0.6153       0.0625       0.3174       0.7621       -0.6872      0.1096      
+6        5904     0.6080       0.6156       0.0614       0.3513       0.7531       -0.6331      0.0900      
+7        6288     0.6460       0.6589       0.0509       0.4119       0.7614       -1.3008      1.8805      
+8        5827     0.5768       0.5836       0.0636       0.2401       0.7104       -0.6190      0.3333      
+9        5984     0.6291       0.6384       0.0528       0.3780       0.7588       -1.0043      1.1075      
+----------------------------------------------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 0 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5913
+  • Media: 0.536335
+  • Mediana: 0.538657
+  • Desviación estándar: 0.065464
+  • Varianza: 0.004286
+  • Coeficiente de variación: 0.1221
+  • Rango: [0.164855, 0.698898]
+  • Amplitud: 0.534043
+  • Cuartiles: Q1=0.494743, Q2=0.538657, Q3=0.583792
+  • Rango intercuartílico (IQR): 0.089050
+  • Asimetría (Skewness): -0.403058
+  • Curtosis (Kurtosis): 0.300752
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=7.4417, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0185)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 1 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6693
+  • Media: 0.673582
+  • Mediana: 0.697938
+  • Desviación estándar: 0.063838
+  • Varianza: 0.004075
+  • Coeficiente de variación: 0.0948
+  • Rango: [0.430981, 0.784525]
+  • Amplitud: 0.353545
+  • Cuartiles: Q1=0.663731, Q2=0.697938, Q3=0.708373
+  • Rango intercuartílico (IQR): 0.044643
+  • Asimetría (Skewness): -1.566031
+  • Curtosis (Kurtosis): 1.856427
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=581.5494, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 2 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5968
+  • Media: 0.581305
+  • Mediana: 0.584254
+  • Desviación estándar: 0.062129
+  • Varianza: 0.003860
+  • Coeficiente de variación: 0.1069
+  • Rango: [0.325315, 0.748530]
+  • Amplitud: 0.423216
+  • Cuartiles: Q1=0.541232, Q2=0.584254, Q3=0.626924
+  • Rango intercuartílico (IQR): 0.085692
+  • Asimetría (Skewness): -0.368634
+  • Curtosis (Kurtosis): -0.075194
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=11.1359, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0001)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 3 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6148
+  • Media: 0.589184
+  • Mediana: 0.594131
+  • Desviación estándar: 0.062798
+  • Varianza: 0.003944
+  • Coeficiente de variación: 0.1066
+  • Rango: [0.326853, 0.772721]
+  • Amplitud: 0.445868
+  • Cuartiles: Q1=0.548138, Q2=0.594131, Q3=0.637441
+  • Rango intercuartílico (IQR): 0.089304
+  • Asimetría (Skewness): -0.484803
+  • Curtosis (Kurtosis): -0.029221
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=23.5644, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 4 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5810
+  • Media: 0.630911
+  • Mediana: 0.640652
+  • Desviación estándar: 0.049579
+  • Varianza: 0.002458
+  • Coeficiente de variación: 0.0786
+  • Rango: [0.398210, 0.753208]
+  • Amplitud: 0.354998
+  • Cuartiles: Q1=0.602295, Q2=0.640652, Q3=0.669052
+  • Rango intercuartílico (IQR): 0.066758
+  • Asimetría (Skewness): -0.919300
+  • Curtosis (Kurtosis): 0.758401
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=80.1808, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 5 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5467
+  • Media: 0.607203
+  • Mediana: 0.615275
+  • Desviación estándar: 0.062466
+  • Varianza: 0.003902
+  • Coeficiente de variación: 0.1029
+  • Rango: [0.317413, 0.762134]
+  • Amplitud: 0.444721
+  • Cuartiles: Q1=0.567491, Q2=0.615275, Q3=0.657276
+  • Rango intercuartílico (IQR): 0.089785
+  • Asimetría (Skewness): -0.687180
+  • Curtosis (Kurtosis): 0.109642
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=53.1188, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 6 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5904
+  • Media: 0.607965
+  • Mediana: 0.615571
+  • Desviación estándar: 0.061370
+  • Varianza: 0.003766
+  • Coeficiente de variación: 0.1009
+  • Rango: [0.351302, 0.753079]
+  • Amplitud: 0.401776
+  • Cuartiles: Q1=0.568944, Q2=0.615571, Q3=0.656263
+  • Rango intercuartílico (IQR): 0.087319
+  • Asimetría (Skewness): -0.633060
+  • Curtosis (Kurtosis): 0.090048
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=42.5447, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 7 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6288
+  • Media: 0.645955
+  • Mediana: 0.658870
+  • Desviación estándar: 0.050920
+  • Varianza: 0.002593
+  • Coeficiente de variación: 0.0788
+  • Rango: [0.411906, 0.761389]
+  • Amplitud: 0.349483
+  • Cuartiles: Q1=0.620149, Q2=0.658870, Q3=0.683549
+  • Rango intercuartílico (IQR): 0.063400
+  • Asimetría (Skewness): -1.300787
+  • Curtosis (Kurtosis): 1.880515
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=166.1358, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 8 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5827
+  • Media: 0.576758
+  • Mediana: 0.583571
+  • Desviación estándar: 0.063635
+  • Varianza: 0.004049
+  • Coeficiente de variación: 0.1103
+  • Rango: [0.240149, 0.710406]
+  • Amplitud: 0.470257
+  • Cuartiles: Q1=0.536907, Q2=0.583571, Q3=0.624248
+  • Rango intercuartílico (IQR): 0.087341
+  • Asimetría (Skewness): -0.618985
+  • Curtosis (Kurtosis): 0.333327
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=29.2203, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 9 - R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5984
+  • Media: 0.629078
+  • Mediana: 0.638361
+  • Desviación estándar: 0.052817
+  • Varianza: 0.002790
+  • Coeficiente de variación: 0.0840
+  • Rango: [0.378040, 0.758772]
+  • Amplitud: 0.380732
+  • Cuartiles: Q1=0.599505, Q2=0.638361, Q3=0.669357
+  • Rango intercuartílico (IQR): 0.069852
+  • Asimetría (Skewness): -1.004276
+  • Curtosis (Kurtosis): 1.107533
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=89.5249, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ✅ SINCRONIZACIÓN INTERMEDIA (criticalidad)
+
+====================================================================================================
+MÉTRICA: Magnitud Media por Canal
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+Clase    N        Media        Mediana      Std          Min          Max          Skew         Kurt        
+----------------------------------------------------------------------------------------------------
+0        5913     0.4103       0.4054       0.0181       0.3724       0.4701       2.3741       4.9789      
+1        6693     0.4307       0.4325       0.0109       0.3991       0.4696       0.0428       2.3245      
+2        5968     0.4142       0.4092       0.0179       0.3827       0.4694       2.0618       3.6100      
+3        6148     0.4146       0.4099       0.0175       0.3840       0.4693       1.9584       3.4251      
+4        5810     0.4212       0.4179       0.0159       0.3919       0.4692       1.6341       2.5818      
+5        5467     0.4170       0.4128       0.0173       0.3824       0.4689       1.7155       2.6671      
+6        5904     0.4175       0.4134       0.0175       0.3868       0.4702       1.7714       2.7587      
+7        6288     0.4231       0.4209       0.0155       0.3923       0.4698       1.3953       2.1258      
+8        5827     0.4137       0.4093       0.0179       0.3759       0.4698       2.1037       3.8914      
+9        5984     0.4207       0.4173       0.0164       0.3890       0.4702       1.5953       2.4226      
+----------------------------------------------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 0 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5913
+  • Media: 0.410256
+  • Mediana: 0.405351
+  • Desviación estándar: 0.018123
+  • Varianza: 0.000328
+  • Coeficiente de variación: 0.0442
+  • Rango: [0.372415, 0.470115]
+  • Amplitud: 0.097700
+  • Cuartiles: Q1=0.401734, Q2=0.405351, Q3=0.411249
+  • Rango intercuartílico (IQR): 0.009515
+  • Asimetría (Skewness): 2.374133
+  • Curtosis (Kurtosis): 4.978898
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=724.0395, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 1 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6693
+  • Media: 0.430704
+  • Mediana: 0.432545
+  • Desviación estándar: 0.010854
+  • Varianza: 0.000118
+  • Coeficiente de variación: 0.0252
+  • Rango: [0.399108, 0.469604]
+  • Amplitud: 0.070496
+  • Cuartiles: Q1=0.430720, Q2=0.432545, Q3=0.433698
+  • Rango intercuartílico (IQR): 0.002978
+  • Asimetría (Skewness): 0.042798
+  • Curtosis (Kurtosis): 2.324543
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=669.5912, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 2 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5968
+  • Media: 0.414187
+  • Mediana: 0.409222
+  • Desviación estándar: 0.017913
+  • Varianza: 0.000321
+  • Coeficiente de variación: 0.0432
+  • Rango: [0.382735, 0.469405]
+  • Amplitud: 0.086670
+  • Cuartiles: Q1=0.403693, Q2=0.409222, Q3=0.416021
+  • Rango intercuartílico (IQR): 0.012327
+  • Asimetría (Skewness): 2.061761
+  • Curtosis (Kurtosis): 3.610032
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=568.1701, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 3 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6148
+  • Media: 0.414631
+  • Mediana: 0.409910
+  • Desviación estándar: 0.017494
+  • Varianza: 0.000306
+  • Coeficiente de variación: 0.0422
+  • Rango: [0.384048, 0.469349]
+  • Amplitud: 0.085301
+  • Cuartiles: Q1=0.403796, Q2=0.409910, Q3=0.417723
+  • Rango intercuartílico (IQR): 0.013927
+  • Asimetría (Skewness): 1.958377
+  • Curtosis (Kurtosis): 3.425097
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=481.4215, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 4 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5810
+  • Media: 0.421161
+  • Mediana: 0.417890
+  • Desviación estándar: 0.015863
+  • Varianza: 0.000252
+  • Coeficiente de variación: 0.0377
+  • Rango: [0.391874, 0.469194]
+  • Amplitud: 0.077320
+  • Cuartiles: Q1=0.411658, Q2=0.417890, Q3=0.426150
+  • Rango intercuartílico (IQR): 0.014492
+  • Asimetría (Skewness): 1.634057
+  • Curtosis (Kurtosis): 2.581808
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=305.0729, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 5 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5467
+  • Media: 0.416979
+  • Mediana: 0.412772
+  • Desviación estándar: 0.017297
+  • Varianza: 0.000299
+  • Coeficiente de variación: 0.0415
+  • Rango: [0.382434, 0.468867]
+  • Amplitud: 0.086432
+  • Cuartiles: Q1=0.405794, Q2=0.412772, Q3=0.422371
+  • Rango intercuartílico (IQR): 0.016577
+  • Asimetría (Skewness): 1.715532
+  • Curtosis (Kurtosis): 2.667103
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=320.6075, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 6 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5904
+  • Media: 0.417505
+  • Mediana: 0.413415
+  • Desviación estándar: 0.017476
+  • Varianza: 0.000305
+  • Coeficiente de variación: 0.0419
+  • Rango: [0.386829, 0.470246]
+  • Amplitud: 0.083417
+  • Cuartiles: Q1=0.406547, Q2=0.413415, Q3=0.421710
+  • Rango intercuartílico (IQR): 0.015163
+  • Asimetría (Skewness): 1.771393
+  • Curtosis (Kurtosis): 2.758688
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=385.0544, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 7 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6288
+  • Media: 0.423123
+  • Mediana: 0.420866
+  • Desviación estándar: 0.015536
+  • Varianza: 0.000241
+  • Coeficiente de variación: 0.0367
+  • Rango: [0.392261, 0.469760]
+  • Amplitud: 0.077499
+  • Cuartiles: Q1=0.413358, Q2=0.420866, Q3=0.428945
+  • Rango intercuartílico (IQR): 0.015587
+  • Asimetría (Skewness): 1.395262
+  • Curtosis (Kurtosis): 2.125757
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=244.0357, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 8 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5827
+  • Media: 0.413711
+  • Mediana: 0.409262
+  • Desviación estándar: 0.017884
+  • Varianza: 0.000320
+  • Coeficiente de variación: 0.0432
+  • Rango: [0.375869, 0.469805]
+  • Amplitud: 0.093935
+  • Cuartiles: Q1=0.403249, Q2=0.409262, Q3=0.415730
+  • Rango intercuartílico (IQR): 0.012481
+  • Asimetría (Skewness): 2.103742
+  • Curtosis (Kurtosis): 3.891421
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=557.0433, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 9 - Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5984
+  • Media: 0.420720
+  • Mediana: 0.417251
+  • Desviación estándar: 0.016392
+  • Varianza: 0.000269
+  • Coeficiente de variación: 0.0390
+  • Rango: [0.389035, 0.470164]
+  • Amplitud: 0.081130
+  • Cuartiles: Q1=0.410659, Q2=0.417251, Q3=0.426036
+  • Rango intercuartílico (IQR): 0.015377
+  • Asimetría (Skewness): 1.595323
+  • Curtosis (Kurtosis): 2.422593
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=309.5002, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+====================================================================================================
+MÉTRICA: PSD Slope (Pendiente del Espectro de Potencia)
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+Clase    N        Media        Mediana      Std          Min          Max          Skew         Kurt        
+----------------------------------------------------------------------------------------------------
+0        5913     -4.0534      -4.0703      0.2362       -4.8672      -3.2629      0.4595       0.4248      
+1        6693     -3.8902      -3.8746      0.2554       -4.9365      -3.0930      -0.2985      0.0467      
+2        5968     -4.0959      -4.1238      0.2505       -4.8773      -3.2362      0.5830       0.4437      
+3        6148     -4.1048      -4.1309      0.2415       -4.8340      -3.1975      0.5764       0.5551      
+4        5810     -4.1250      -4.1492      0.2698       -4.9595      -3.3129      0.4474       0.0831      
+5        5467     -4.1283      -4.1538      0.2566       -4.9911      -3.2562      0.5686       0.4956      
+6        5904     -4.0389      -4.0537      0.2570       -4.8490      -3.2007      0.3853       0.2673      
+7        6288     -4.0858      -4.1038      0.2799       -5.0482      -3.2680      0.2550       -0.0500     
+8        5827     -4.0147      -4.0362      0.2435       -4.9214      -3.2378      0.5214       0.7221      
+9        5984     -4.0924      -4.1140      0.2741       -4.8950      -3.2602      0.4283       0.1137      
+----------------------------------------------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 0 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5913
+  • Media: -4.053428
+  • Mediana: -4.070307
+  • Desviación estándar: 0.236208
+  • Varianza: 0.055794
+  • Coeficiente de variación: -0.0583
+  • Rango: [-4.867207, -3.262859]
+  • Amplitud: 1.604348
+  • Cuartiles: Q1=-4.208520, Q2=-4.070307, Q3=-3.925933
+  • Rango intercuartílico (IQR): 0.282588
+  • Asimetría (Skewness): 0.459516
+  • Curtosis (Kurtosis): 0.424829
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=28.6985, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 1 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6693
+  • Media: -3.890163
+  • Mediana: -3.874644
+  • Desviación estándar: 0.255407
+  • Varianza: 0.065233
+  • Coeficiente de variación: -0.0657
+  • Rango: [-4.936488, -3.092990]
+  • Amplitud: 1.843498
+  • Cuartiles: Q1=-4.055028, Q2=-3.874644, Q3=-3.713037
+  • Rango intercuartílico (IQR): 0.341991
+  • Asimetría (Skewness): -0.298487
+  • Curtosis (Kurtosis): 0.046727
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=7.7780, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0003)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 2 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5968
+  • Media: -4.095948
+  • Mediana: -4.123805
+  • Desviación estándar: 0.250487
+  • Varianza: 0.062744
+  • Coeficiente de variación: -0.0612
+  • Rango: [-4.877265, -3.236171]
+  • Amplitud: 1.641094
+  • Cuartiles: Q1=-4.261473, Q2=-4.123805, Q3=-3.971506
+  • Rango intercuartílico (IQR): 0.289967
+  • Asimetría (Skewness): 0.582955
+  • Curtosis (Kurtosis): 0.443702
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=49.7826, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 3 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6148
+  • Media: -4.104770
+  • Mediana: -4.130943
+  • Desviación estándar: 0.241487
+  • Varianza: 0.058316
+  • Coeficiente de variación: -0.0588
+  • Rango: [-4.833979, -3.197461]
+  • Amplitud: 1.636518
+  • Cuartiles: Q1=-4.261532, Q2=-4.130943, Q3=-3.979240
+  • Rango intercuartílico (IQR): 0.282292
+  • Asimetría (Skewness): 0.576446
+  • Curtosis (Kurtosis): 0.555120
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=47.8507, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 4 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5810
+  • Media: -4.125047
+  • Mediana: -4.149240
+  • Desviación estándar: 0.269779
+  • Varianza: 0.072781
+  • Coeficiente de variación: -0.0654
+  • Rango: [-4.959473, -3.312851]
+  • Amplitud: 1.646621
+  • Cuartiles: Q1=-4.310239, Q2=-4.149240, Q3=-3.976979
+  • Rango intercuartílico (IQR): 0.333261
+  • Asimetría (Skewness): 0.447439
+  • Curtosis (Kurtosis): 0.083149
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=29.0712, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 5 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5467
+  • Media: -4.128338
+  • Mediana: -4.153774
+  • Desviación estándar: 0.256634
+  • Varianza: 0.065861
+  • Coeficiente de variación: -0.0622
+  • Rango: [-4.991066, -3.256155]
+  • Amplitud: 1.734911
+  • Cuartiles: Q1=-4.297183, Q2=-4.153774, Q3=-3.994781
+  • Rango intercuartílico (IQR): 0.302402
+  • Asimetría (Skewness): 0.568645
+  • Curtosis (Kurtosis): 0.495629
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=39.8484, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 6 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5904
+  • Media: -4.038860
+  • Mediana: -4.053708
+  • Desviación estándar: 0.256955
+  • Varianza: 0.066026
+  • Coeficiente de variación: -0.0636
+  • Rango: [-4.848993, -3.200665]
+  • Amplitud: 1.648328
+  • Cuartiles: Q1=-4.209282, Q2=-4.053708, Q3=-3.899232
+  • Rango intercuartílico (IQR): 0.310049
+  • Asimetría (Skewness): 0.385281
+  • Curtosis (Kurtosis): 0.267307
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=27.7418, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 7 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6288
+  • Media: -4.085792
+  • Mediana: -4.103794
+  • Desviación estándar: 0.279898
+  • Varianza: 0.078343
+  • Coeficiente de variación: -0.0685
+  • Rango: [-5.048179, -3.267985]
+  • Amplitud: 1.780195
+  • Cuartiles: Q1=-4.277948, Q2=-4.103794, Q3=-3.914199
+  • Rango intercuartílico (IQR): 0.363749
+  • Asimetría (Skewness): 0.255036
+  • Curtosis (Kurtosis): -0.050001
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=12.7713, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0001)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 8 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5827
+  • Media: -4.014726
+  • Mediana: -4.036196
+  • Desviación estándar: 0.243509
+  • Varianza: 0.059297
+  • Coeficiente de variación: -0.0607
+  • Rango: [-4.921444, -3.237838]
+  • Amplitud: 1.683606
+  • Cuartiles: Q1=-4.168460, Q2=-4.036196, Q3=-3.894283
+  • Rango intercuartílico (IQR): 0.274176
+  • Asimetría (Skewness): 0.521380
+  • Curtosis (Kurtosis): 0.722141
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=50.6904, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 9 - PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5984
+  • Media: -4.092373
+  • Mediana: -4.113956
+  • Desviación estándar: 0.274093
+  • Varianza: 0.075127
+  • Coeficiente de variación: -0.0670
+  • Rango: [-4.895008, -3.260203]
+  • Amplitud: 1.634805
+  • Cuartiles: Q1=-4.279187, Q2=-4.113956, Q3=-3.938257
+  • Rango intercuartílico (IQR): 0.340931
+  • Asimetría (Skewness): 0.428269
+  • Curtosis (Kurtosis): 0.113669
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=26.0967, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+====================================================================================================
+MÉTRICA: DFA Alpha (Exponente de Fluctuaciones)
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+Clase    N        Media        Mediana      Std          Min          Max          Skew         Kurt        
+----------------------------------------------------------------------------------------------------
+0        5913     1.6718       1.6657       0.0419       1.5390       1.9092       0.4875       0.9090      
+1        6693     1.8349       1.8921       0.1169       1.4688       1.9619       -1.5694      1.5751      
+2        5968     1.6835       1.6772       0.0531       1.5143       1.9368       0.6864       2.6016      
+3        6148     1.6907       1.6858       0.0569       1.5007       1.9506       0.6059       2.2821      
+4        5810     1.7113       1.7134       0.0657       1.5151       1.9444       -0.0365      1.6425      
+5        5467     1.7011       1.6961       0.0655       1.5065       1.9532       0.6486       1.7227      
+6        5904     1.6924       1.6925       0.0584       1.5149       1.9310       0.1762       1.8563      
+7        6288     1.7202       1.7149       0.0784       1.5027       1.9456       0.1983       0.9228      
+8        5827     1.6801       1.6767       0.0477       1.5251       1.9228       -0.0030      0.8832      
+9        5984     1.7051       1.7075       0.0665       1.4808       1.9261       0.0467       1.6790      
+----------------------------------------------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 0 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5913
+  • Media: 1.671829
+  • Mediana: 1.665679
+  • Desviación estándar: 0.041911
+  • Varianza: 0.001757
+  • Coeficiente de variación: 0.0251
+  • Rango: [1.538965, 1.909214]
+  • Amplitud: 0.370249
+  • Cuartiles: Q1=1.648347, Q2=1.665679, Q3=1.694842
+  • Rango intercuartílico (IQR): 0.046495
+  • Asimetría (Skewness): 0.487463
+  • Curtosis (Kurtosis): 0.908997
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=54.6651, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 1 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6693
+  • Media: 1.834876
+  • Mediana: 1.892106
+  • Desviación estándar: 0.116921
+  • Varianza: 0.013671
+  • Coeficiente de variación: 0.0637
+  • Rango: [1.468793, 1.961936]
+  • Amplitud: 0.493143
+  • Cuartiles: Q1=1.789950, Q2=1.892106, Q3=1.910180
+  • Rango intercuartílico (IQR): 0.120230
+  • Asimetría (Skewness): -1.569375
+  • Curtosis (Kurtosis): 1.575103
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=582.8339, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 2 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5968
+  • Media: 1.683524
+  • Mediana: 1.677168
+  • Desviación estándar: 0.053148
+  • Varianza: 0.002825
+  • Coeficiente de variación: 0.0316
+  • Rango: [1.514349, 1.936779]
+  • Amplitud: 0.422430
+  • Cuartiles: Q1=1.654664, Q2=1.677168, Q3=1.713494
+  • Rango intercuartílico (IQR): 0.058830
+  • Asimetría (Skewness): 0.686359
+  • Curtosis (Kurtosis): 2.601576
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=62.8504, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 3 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6148
+  • Media: 1.690678
+  • Mediana: 1.685847
+  • Desviación estándar: 0.056863
+  • Varianza: 0.003233
+  • Coeficiente de variación: 0.0336
+  • Rango: [1.500731, 1.950613]
+  • Amplitud: 0.449883
+  • Cuartiles: Q1=1.659294, Q2=1.685847, Q3=1.720050
+  • Rango intercuartílico (IQR): 0.060756
+  • Asimetría (Skewness): 0.605925
+  • Curtosis (Kurtosis): 2.282081
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=71.0464, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 4 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5810
+  • Media: 1.711300
+  • Mediana: 1.713401
+  • Desviación estándar: 0.065724
+  • Varianza: 0.004320
+  • Coeficiente de variación: 0.0384
+  • Rango: [1.515110, 1.944423]
+  • Amplitud: 0.429313
+  • Cuartiles: Q1=1.684237, Q2=1.713401, Q3=1.737048
+  • Rango intercuartílico (IQR): 0.052812
+  • Asimetría (Skewness): -0.036515
+  • Curtosis (Kurtosis): 1.642481
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=148.9062, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 5 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5467
+  • Media: 1.701073
+  • Mediana: 1.696078
+  • Desviación estándar: 0.065466
+  • Varianza: 0.004286
+  • Coeficiente de variación: 0.0385
+  • Rango: [1.506548, 1.953156]
+  • Amplitud: 0.446608
+  • Cuartiles: Q1=1.666200, Q2=1.696078, Q3=1.725119
+  • Rango intercuartílico (IQR): 0.058919
+  • Asimetría (Skewness): 0.648607
+  • Curtosis (Kurtosis): 1.722745
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=102.9889, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 6 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5904
+  • Media: 1.692371
+  • Mediana: 1.692506
+  • Desviación estándar: 0.058396
+  • Varianza: 0.003410
+  • Coeficiente de variación: 0.0345
+  • Rango: [1.514928, 1.931044]
+  • Amplitud: 0.416116
+  • Cuartiles: Q1=1.662434, Q2=1.692506, Q3=1.724842
+  • Rango intercuartílico (IQR): 0.062408
+  • Asimetría (Skewness): 0.176196
+  • Curtosis (Kurtosis): 1.856303
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=77.1004, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 7 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6288
+  • Media: 1.720235
+  • Mediana: 1.714869
+  • Desviación estándar: 0.078415
+  • Varianza: 0.006149
+  • Coeficiente de variación: 0.0456
+  • Rango: [1.502689, 1.945573]
+  • Amplitud: 0.442884
+  • Cuartiles: Q1=1.687430, Q2=1.714869, Q3=1.739538
+  • Rango intercuartílico (IQR): 0.052108
+  • Asimetría (Skewness): 0.198329
+  • Curtosis (Kurtosis): 0.922813
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=202.5702, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 8 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5827
+  • Media: 1.680078
+  • Mediana: 1.676709
+  • Desviación estándar: 0.047703
+  • Varianza: 0.002276
+  • Coeficiente de variación: 0.0284
+  • Rango: [1.525108, 1.922760]
+  • Amplitud: 0.397652
+  • Cuartiles: Q1=1.653385, Q2=1.676709, Q3=1.713906
+  • Rango intercuartílico (IQR): 0.060521
+  • Asimetría (Skewness): -0.002980
+  • Curtosis (Kurtosis): 0.883246
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=27.6689, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 9 - DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5984
+  • Media: 1.705147
+  • Mediana: 1.707461
+  • Desviación estándar: 0.066539
+  • Varianza: 0.004427
+  • Coeficiente de variación: 0.0390
+  • Rango: [1.480775, 1.926112]
+  • Amplitud: 0.445337
+  • Cuartiles: Q1=1.677743, Q2=1.707461, Q3=1.730672
+  • Rango intercuartílico (IQR): 0.052929
+  • Asimetría (Skewness): 0.046652
+  • Curtosis (Kurtosis): 1.678963
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=157.8282, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+🎯 ANÁLISIS DE CRITICALIDAD:
+  ❌ FUERA DE RANGO DE CRITICALIDAD
+
+====================================================================================================
+MÉTRICA: Mutual Information (Información Mutua)
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+Clase    N        Media        Mediana      Std          Min          Max          Skew         Kurt        
+----------------------------------------------------------------------------------------------------
+0        5913     1.4958       1.5160       0.1215       0.9289       1.7977       -1.6895      3.6690      
+1        6693     1.4307       1.4335       0.0917       1.0477       1.7909       -0.0740      0.5196      
+2        5968     1.5141       1.5412       0.1241       0.9468       1.8689       -1.7109      3.6158      
+3        6148     1.5159       1.5415       0.1186       0.9758       1.8016       -1.5381      3.1031      
+4        5810     1.5136       1.5393       0.1158       0.9744       1.8582       -1.2662      2.0652      
+5        5467     1.5108       1.5384       0.1251       0.9733       1.8008       -1.3919      2.3229      
+6        5904     1.5112       1.5359       0.1187       0.9561       1.7791       -1.4351      2.6865      
+7        6288     1.4979       1.5207       0.1180       0.9775       1.8339       -0.7178      0.3338      
+8        5827     1.5163       1.5403       0.1190       0.9700       1.7751       -1.8935      4.4427      
+9        5984     1.5142       1.5384       0.1144       0.9592       1.8200       -1.1778      1.8627      
+----------------------------------------------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 0 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5913
+  • Media: 1.495837
+  • Mediana: 1.516029
+  • Desviación estándar: 0.121456
+  • Varianza: 0.014752
+  • Coeficiente de variación: 0.0812
+  • Rango: [0.928941, 1.797657]
+  • Amplitud: 0.868717
+  • Cuartiles: Q1=1.456386, Q2=1.516029, Q3=1.571926
+  • Rango intercuartílico (IQR): 0.115540
+  • Asimetría (Skewness): -1.689542
+  • Curtosis (Kurtosis): 3.669012
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=213.1541, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 1 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6693
+  • Media: 1.430718
+  • Mediana: 1.433532
+  • Desviación estándar: 0.091692
+  • Varianza: 0.008407
+  • Coeficiente de variación: 0.0641
+  • Rango: [1.047656, 1.790901]
+  • Amplitud: 0.743245
+  • Cuartiles: Q1=1.373217, Q2=1.433532, Q3=1.488028
+  • Rango intercuartílico (IQR): 0.114811
+  • Asimetría (Skewness): -0.074014
+  • Curtosis (Kurtosis): 0.519639
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=6.7654, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0017)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 2 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5968
+  • Media: 1.514062
+  • Mediana: 1.541158
+  • Desviación estándar: 0.124070
+  • Varianza: 0.015393
+  • Coeficiente de variación: 0.0819
+  • Rango: [0.946828, 1.868917]
+  • Amplitud: 0.922088
+  • Cuartiles: Q1=1.477527, Q2=1.541158, Q3=1.589424
+  • Rango intercuartílico (IQR): 0.111897
+  • Asimetría (Skewness): -1.710914
+  • Curtosis (Kurtosis): 3.615816
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=246.7722, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 3 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6148
+  • Media: 1.515904
+  • Mediana: 1.541494
+  • Desviación estándar: 0.118556
+  • Varianza: 0.014055
+  • Coeficiente de variación: 0.0782
+  • Rango: [0.975850, 1.801645]
+  • Amplitud: 0.825796
+  • Cuartiles: Q1=1.476022, Q2=1.541494, Q3=1.589950
+  • Rango intercuartílico (IQR): 0.113928
+  • Asimetría (Skewness): -1.538109
+  • Curtosis (Kurtosis): 3.103096
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=203.2870, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 4 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5810
+  • Media: 1.513595
+  • Mediana: 1.539306
+  • Desviación estándar: 0.115775
+  • Varianza: 0.013404
+  • Coeficiente de variación: 0.0765
+  • Rango: [0.974441, 1.858172]
+  • Amplitud: 0.883732
+  • Cuartiles: Q1=1.464889, Q2=1.539306, Q3=1.590340
+  • Rango intercuartílico (IQR): 0.125451
+  • Asimetría (Skewness): -1.266179
+  • Curtosis (Kurtosis): 2.065181
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=144.8520, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 5 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5467
+  • Media: 1.510808
+  • Mediana: 1.538431
+  • Desviación estándar: 0.125097
+  • Varianza: 0.015649
+  • Coeficiente de variación: 0.0828
+  • Rango: [0.973325, 1.800771]
+  • Amplitud: 0.827446
+  • Cuartiles: Q1=1.468126, Q2=1.538431, Q3=1.590808
+  • Rango intercuartílico (IQR): 0.122683
+  • Asimetría (Skewness): -1.391870
+  • Curtosis (Kurtosis): 2.322925
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=171.7670, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 6 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5904
+  • Media: 1.511246
+  • Mediana: 1.535927
+  • Desviación estándar: 0.118661
+  • Varianza: 0.014080
+  • Coeficiente de variación: 0.0785
+  • Rango: [0.956068, 1.779137]
+  • Amplitud: 0.823069
+  • Cuartiles: Q1=1.468877, Q2=1.535927, Q3=1.588552
+  • Rango intercuartílico (IQR): 0.119676
+  • Asimetría (Skewness): -1.435132
+  • Curtosis (Kurtosis): 2.686496
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=171.7203, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 7 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6288
+  • Media: 1.497908
+  • Mediana: 1.520664
+  • Desviación estándar: 0.117987
+  • Varianza: 0.013921
+  • Coeficiente de variación: 0.0788
+  • Rango: [0.977450, 1.833918]
+  • Amplitud: 0.856467
+  • Cuartiles: Q1=1.427493, Q2=1.520664, Q3=1.583931
+  • Rango intercuartílico (IQR): 0.156438
+  • Asimetría (Skewness): -0.717780
+  • Curtosis (Kurtosis): 0.333783
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=70.8151, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 8 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5827
+  • Media: 1.516334
+  • Mediana: 1.540284
+  • Desviación estándar: 0.118962
+  • Varianza: 0.014152
+  • Coeficiente de variación: 0.0785
+  • Rango: [0.969967, 1.775149]
+  • Amplitud: 0.805181
+  • Cuartiles: Q1=1.486660, Q2=1.540284, Q3=1.586626
+  • Rango intercuartílico (IQR): 0.099965
+  • Asimetría (Skewness): -1.893453
+  • Curtosis (Kurtosis): 4.442746
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=272.4573, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 9 - Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5984
+  • Media: 1.514192
+  • Mediana: 1.538431
+  • Desviación estándar: 0.114358
+  • Varianza: 0.013078
+  • Coeficiente de variación: 0.0755
+  • Rango: [0.959246, 1.820018]
+  • Amplitud: 0.860772
+  • Cuartiles: Q1=1.464258, Q2=1.538431, Q3=1.591318
+  • Rango intercuartílico (IQR): 0.127060
+  • Asimetría (Skewness): -1.177776
+  • Curtosis (Kurtosis): 1.862711
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=127.4928, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+====================================================================================================
+MÉTRICA: Entropía de Shannon (Media por Canal)
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+Clase    N        Media        Mediana      Std          Min          Max          Skew         Kurt        
+----------------------------------------------------------------------------------------------------
+0        5913     4.4690       4.4140       0.1905       3.5410       5.4060       0.8786       0.2964      
+1        6693     5.1920       5.3009       0.2954       4.0278       5.6291       -1.3598      1.2812      
+2        5968     4.4833       4.4000       0.2298       4.0298       5.4541       1.3306       1.7066      
+3        6148     4.5348       4.4411       0.2510       4.0862       5.4816       1.2110       1.0972      
+4        5810     4.6274       4.5654       0.2988       4.1174       5.4744       0.7482       -0.3345     
+5        5467     4.5849       4.4889       0.2868       4.1009       5.4436       0.9714       0.1371      
+6        5904     4.4781       4.3944       0.2824       4.0173       5.4567       1.2052       0.9404      
+7        6288     4.6756       4.5919       0.3603       4.0579       5.4507       0.3930       -1.0952     
+8        5827     4.4136       4.3521       0.2063       3.9886       5.3694       1.2279       1.6159      
+9        5984     4.5711       4.4961       0.3195       4.0295       5.4772       0.7305       -0.3966     
+----------------------------------------------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 0 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5913
+  • Media: 4.468953
+  • Mediana: 4.414042
+  • Desviación estándar: 0.190463
+  • Varianza: 0.036276
+  • Coeficiente de variación: 0.0426
+  • Rango: [3.540993, 5.405964]
+  • Amplitud: 1.864970
+  • Cuartiles: Q1=4.339413, Q2=4.414042, Q3=4.561037
+  • Rango intercuartílico (IQR): 0.221624
+  • Asimetría (Skewness): 0.878572
+  • Curtosis (Kurtosis): 0.296395
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=223.0528, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 1 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6693
+  • Media: 5.192044
+  • Mediana: 5.300923
+  • Desviación estándar: 0.295449
+  • Varianza: 0.087290
+  • Coeficiente de variación: 0.0569
+  • Rango: [4.027841, 5.629107]
+  • Amplitud: 1.601267
+  • Cuartiles: Q1=5.059560, Q2=5.300923, Q3=5.401879
+  • Rango intercuartílico (IQR): 0.342319
+  • Asimetría (Skewness): -1.359846
+  • Curtosis (Kurtosis): 1.281196
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=330.0979, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 2 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5968
+  • Media: 4.483306
+  • Mediana: 4.399961
+  • Desviación estándar: 0.229761
+  • Varianza: 0.052790
+  • Coeficiente de variación: 0.0512
+  • Rango: [4.029754, 5.454078]
+  • Amplitud: 1.424324
+  • Cuartiles: Q1=4.321388, Q2=4.399961, Q3=4.631859
+  • Rango intercuartílico (IQR): 0.310471
+  • Asimetría (Skewness): 1.330614
+  • Curtosis (Kurtosis): 1.706556
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=229.1908, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 3 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6148
+  • Media: 4.534821
+  • Mediana: 4.441143
+  • Desviación estándar: 0.251042
+  • Varianza: 0.063022
+  • Coeficiente de variación: 0.0554
+  • Rango: [4.086188, 5.481634]
+  • Amplitud: 1.395446
+  • Cuartiles: Q1=4.354795, Q2=4.441143, Q3=4.688623
+  • Rango intercuartílico (IQR): 0.333828
+  • Asimetría (Skewness): 1.211039
+  • Curtosis (Kurtosis): 1.097214
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=222.3899, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 4 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5810
+  • Media: 4.627427
+  • Mediana: 4.565384
+  • Desviación estándar: 0.298800
+  • Varianza: 0.089281
+  • Coeficiente de variación: 0.0646
+  • Rango: [4.117395, 5.474358]
+  • Amplitud: 1.356963
+  • Cuartiles: Q1=4.383451, Q2=4.565384, Q3=4.817457
+  • Rango intercuartílico (IQR): 0.434007
+  • Asimetría (Skewness): 0.748152
+  • Curtosis (Kurtosis): -0.334467
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=124.1843, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 5 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5467
+  • Media: 4.584889
+  • Mediana: 4.488905
+  • Desviación estándar: 0.286776
+  • Varianza: 0.082241
+  • Coeficiente de variación: 0.0625
+  • Rango: [4.100863, 5.443624]
+  • Amplitud: 1.342760
+  • Cuartiles: Q1=4.367217, Q2=4.488905, Q3=4.743032
+  • Rango intercuartílico (IQR): 0.375815
+  • Asimetría (Skewness): 0.971395
+  • Curtosis (Kurtosis): 0.137117
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=169.3391, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 6 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5904
+  • Media: 4.478092
+  • Mediana: 4.394441
+  • Desviación estándar: 0.282443
+  • Varianza: 0.079774
+  • Coeficiente de variación: 0.0631
+  • Rango: [4.017294, 5.456720]
+  • Amplitud: 1.439426
+  • Cuartiles: Q1=4.267985, Q2=4.394441, Q3=4.607330
+  • Rango intercuartílico (IQR): 0.339345
+  • Asimetría (Skewness): 1.205177
+  • Curtosis (Kurtosis): 0.940362
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=198.8831, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 7 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 6288
+  • Media: 4.675637
+  • Mediana: 4.591851
+  • Desviación estándar: 0.360327
+  • Varianza: 0.129835
+  • Coeficiente de variación: 0.0771
+  • Rango: [4.057890, 5.450746]
+  • Amplitud: 1.392856
+  • Cuartiles: Q1=4.356136, Q2=4.591851, Q3=4.988184
+  • Rango intercuartílico (IQR): 0.632048
+  • Asimetría (Skewness): 0.393025
+  • Curtosis (Kurtosis): -1.095191
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=128.3093, crit_5%=0.7870)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 8 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5827
+  • Media: 4.413641
+  • Mediana: 4.352079
+  • Desviación estándar: 0.206312
+  • Varianza: 0.042565
+  • Coeficiente de variación: 0.0467
+  • Rango: [3.988617, 5.369371]
+  • Amplitud: 1.380754
+  • Cuartiles: Q1=4.268434, Q2=4.352079, Q3=4.528645
+  • Rango intercuartílico (IQR): 0.260211
+  • Asimetría (Skewness): 1.227894
+  • Curtosis (Kurtosis): 1.615856
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=161.4360, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+CLASE 9 - Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+📊 ESTADÍSTICAS DESCRIPTIVAS:
+  • Tamaño muestral: 5984
+  • Media: 4.571148
+  • Mediana: 4.496126
+  • Desviación estándar: 0.319480
+  • Varianza: 0.102067
+  • Coeficiente de variación: 0.0699
+  • Rango: [4.029496, 5.477225]
+  • Amplitud: 1.447730
+  • Cuartiles: Q1=4.311952, Q2=4.496126, Q3=4.777905
+  • Rango intercuartílico (IQR): 0.465953
+  • Asimetría (Skewness): 0.730547
+  • Curtosis (Kurtosis): -0.396645
+
+🔬 TESTS DE NORMALIDAD:
+  • Shapiro-Wilk: NO NORMAL (p=0.0000)
+  • Anderson-Darling: NO NORMAL (stat=129.8636, crit_5%=0.7860)
+  • Kolmogorov-Smirnov: NO NORMAL (p=0.0000)
+  • D'Agostino-Pearson: NO NORMAL (p=0.0000)
+
+
+====================================================================================================
+ANÁLISIS DE CANALES INDIVIDUALES
+====================================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Magnitud Canal 0
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        0.4574       0.1411       0.2595       0.7997      
+1        0.4420       0.0701       0.3193       0.8070      
+2        0.4685       0.1328       0.2826       0.8000      
+3        0.4703       0.1325       0.2862       0.8021      
+4        0.4974       0.1113       0.3174       0.8023      
+5        0.4782       0.1280       0.2788       0.8010      
+6        0.4846       0.1237       0.2981       0.8066      
+7        0.4943       0.1054       0.3225       0.8031      
+8        0.4742       0.1356       0.2632       0.8032      
+9        0.4933       0.1141       0.3100       0.8033      
+------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Magnitud Canal 1
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        0.7229       0.1857       0.2819       0.9067      
+1        0.6039       0.0721       0.2875       0.8368      
+2        0.7110       0.1765       0.2869       0.8859      
+3        0.7055       0.1760       0.2788       0.8841      
+4        0.6815       0.1556       0.2876       0.8675      
+5        0.6947       0.1694       0.2865       0.8848      
+6        0.6985       0.1678       0.2785       0.8790      
+7        0.6747       0.1452       0.2798       0.8658      
+8        0.7088       0.1809       0.2793       0.8964      
+9        0.6848       0.1578       0.2734       0.8705      
+------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Magnitud Canal 2
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        0.1303       0.0588       0.0506       0.3584      
+1        0.2862       0.0690       0.0904       0.4116      
+2        0.1365       0.0655       0.0746       0.3833      
+3        0.1409       0.0667       0.0838       0.4031      
+4        0.1548       0.0731       0.0892       0.4006      
+5        0.1496       0.0709       0.0872       0.3982      
+6        0.1405       0.0709       0.0794       0.3970      
+7        0.1702       0.0806       0.0873       0.4031      
+8        0.1301       0.0627       0.0653       0.3960      
+9        0.1533       0.0752       0.0887       0.4047      
+------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Magnitud Canal 3
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        0.3304       0.0499       0.2694       0.5537      
+1        0.3907       0.0782       0.2118       0.5167      
+2        0.3408       0.0426       0.2298       0.5292      
+3        0.3418       0.0403       0.2249       0.5455      
+4        0.3510       0.0323       0.2167       0.5308      
+5        0.3455       0.0381       0.2306       0.5194      
+6        0.3465       0.0365       0.2275       0.5394      
+7        0.3534       0.0326       0.2178       0.5194      
+8        0.3417       0.0423       0.2289       0.5299      
+9        0.3515       0.0326       0.2169       0.5237      
+------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Entropía Shannon Canal 0
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        4.6171       0.1734       3.8899       5.2724      
+1        5.1816       0.2419       3.7151       5.6242      
+2        4.6180       0.2324       3.8152       5.4839      
+3        4.6660       0.2470       3.9019       5.4758      
+4        4.7069       0.3063       3.8460       5.5253      
+5        4.7024       0.2975       3.7920       5.4701      
+6        4.5811       0.2898       3.8377       5.4702      
+7        4.7586       0.3639       3.8058       5.5154      
+8        4.5341       0.2220       3.7821       5.4308      
+9        4.6623       0.3230       3.8026       5.5012      
+------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Entropía Shannon Canal 1
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        4.1893       0.5200       2.9734       5.7744      
+1        4.8447       0.3727       3.5258       5.7562      
+2        4.2072       0.4805       3.4082       5.7607      
+3        4.2653       0.4889       3.5445       5.7670      
+4        4.3144       0.4881       3.5474       5.8088      
+5        4.3130       0.4799       3.5538       5.7621      
+6        4.1766       0.4827       3.3994       5.7914      
+7        4.3391       0.4941       3.5729       5.7855      
+8        4.1416       0.4834       3.2523       5.7822      
+9        4.2528       0.4972       3.5185       5.7991      
+------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Entropía Shannon Canal 2
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        4.4257       0.1954       3.1737       5.5061      
+1        5.2859       0.3131       3.9905       5.6724      
+2        4.4378       0.2632       3.9099       5.5806      
+3        4.4793       0.2946       3.9498       5.5783      
+4        4.6553       0.3525       3.9671       5.6096      
+5        4.5473       0.3388       3.9393       5.5878      
+6        4.4788       0.3339       3.7652       5.5912      
+7        4.7056       0.4252       3.9299       5.6238      
+8        4.3717       0.2284       3.8616       5.5733      
+9        4.5857       0.3741       3.8890       5.6284      
+------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Entropía Shannon Canal 3
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Clase    Media        Std          Min          Max         
+------------------------------------------------------------
+0        4.6437       0.1698       3.9221       5.6361      
+1        5.4559       0.4062       4.1957       5.8352      
+2        4.6702       0.2296       4.2112       5.7477      
+3        4.7286       0.2511       4.2807       5.8088      
+4        4.8331       0.3230       4.2017       5.8022      
+5        4.7768       0.3001       4.1691       5.7778      
+6        4.6759       0.3061       4.1500       5.8186      
+7        4.8994       0.3967       4.1391       5.8137      
+8        4.6072       0.2091       4.1211       5.7836      
+9        4.7837       0.3469       4.0870       5.8019      
+------------------------------------------------------------
+
+
+====================================================================================================
+COMPARACIONES ENTRE CLASES (ANOVA y Kruskal-Wallis)
+====================================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: R (Parámetro de Orden) - Valor Estacionario
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  ANOVA (paramétrico):
+    • F-statistic: 2674.8936
+    • p-value: 0.000000
+    • Resultado: Las medias son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+  Kruskal-Wallis (no paramétrico):
+    • H-statistic: 18316.3506
+    • p-value: 0.000000
+    • Resultado: Las distribuciones son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Magnitud Media por Canal
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  ANOVA (paramétrico):
+    • F-statistic: 795.5122
+    • p-value: 0.000000
+    • Resultado: Las medias son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+  Kruskal-Wallis (no paramétrico):
+    • H-statistic: 14037.4653
+    • p-value: 0.000000
+    • Resultado: Las distribuciones son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: PSD Slope (Pendiente del Espectro de Potencia)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  ANOVA (paramétrico):
+    • F-statistic: 485.6801
+    • p-value: 0.000000
+    • Resultado: Las medias son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+  Kruskal-Wallis (no paramétrico):
+    • H-statistic: 4474.3705
+    • p-value: 0.000000
+    • Resultado: Las distribuciones son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: DFA Alpha (Exponente de Fluctuaciones)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  ANOVA (paramétrico):
+    • F-statistic: 2980.4367
+    • p-value: 0.000000
+    • Resultado: Las medias son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+  Kruskal-Wallis (no paramétrico):
+    • H-statistic: 12888.8507
+    • p-value: 0.000000
+    • Resultado: Las distribuciones son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Mutual Information (Información Mutua)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  ANOVA (paramétrico):
+    • F-statistic: 327.7228
+    • p-value: 0.000000
+    • Resultado: Las medias son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+  Kruskal-Wallis (no paramétrico):
+    • H-statistic: 4753.8450
+    • p-value: 0.000000
+    • Resultado: Las distribuciones son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+MÉTRICA: Entropía de Shannon (Media por Canal)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  ANOVA (paramétrico):
+    • F-statistic: 4165.9551
+    • p-value: 0.000000
+    • Resultado: Las medias son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)
+
+  Kruskal-Wallis (no paramétrico):
+    • H-statistic: 15841.9036
+    • p-value: 0.000000
+    • Resultado: Las distribuciones son SIGNIFICATIVAMENTE DIFERENTES (α=0.05)

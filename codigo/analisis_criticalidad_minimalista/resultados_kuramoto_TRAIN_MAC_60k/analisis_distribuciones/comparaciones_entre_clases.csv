@@ -1,0 +1,7 @@
+metrica,anova_f_stat,anova_p_value,anova_significativo,kruskal_wallis_h_stat,kruskal_wallis_p_value,kruskal_wallis_significativo
+R_stationary,2674.8936140590217,0.0,True,18316.350562023454,0.0,True
+mag_channel_mean,795.5121832533782,0.0,True,14037.465279594784,0.0,True
+PSD_slope,485.6801402196752,0.0,True,4474.370526569895,0.0,True
+DFA_alpha,2980.4366979796127,0.0,True,12888.850652510562,0.0,True
+mutual_info,327.722768983745,0.0,True,4753.845001414596,0.0,True
+shannon_entropy_mean,4165.955082087222,0.0,True,15841.903554953435,0.0,True
