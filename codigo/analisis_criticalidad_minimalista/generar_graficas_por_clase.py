@@ -1,5 +1,6 @@
 """
 Generar gráficas de distribución individuales para cada clase y cada métrica en PDF
+VERSIÓN MAC - Análisis de 60k imágenes con 6 métricas principales
 """
 import torch
 import pandas as pd
@@ -8,106 +9,106 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import os
 
-print('📊 GENERANDO GRÁFICAS POR CLASE - TODAS LAS MÉTRICAS EN PDF')
+print('📊 GENERANDO GRÁFICAS POR CLASE - 6 MÉTRICAS PRINCIPALES EN PDF')
 print('='*80)
+print('Versión: Apple M3 (MPS) - 60,002 imágenes')
+print('='*80)
+print()
 
-# Cargar datos
-data = torch.load('resultados_kuramoto_full_dataset_CORRECTED/metricas_completas_CORRECTED.pt', weights_only=False)
+# Cargar datos de Mac
+data = torch.load('resultados_kuramoto_TRAIN_MAC_60k/metricas_completas_TRAIN_MAC_60k.pt', weights_only=False)
 metricas = [m for m in data['metricas'] if m.get('success', False)]
 
-print(f'Procesando {len(metricas)} imágenes...')
+print(f'✅ Dataset cargado: {len(metricas)} imágenes')
+print()
 
-# Calcular métricas por imagen
+# Calcular las 6 métricas principales por imagen
+print('📊 Calculando métricas por imagen...')
 resultados = []
-for m in metricas:
-    R_series = m['R_series']
-    R_median = np.median(R_series)
-    R_final = R_series[-1]
+for i, m in enumerate(metricas):
+    if i % 10000 == 0:
+        print(f'   Procesadas: {i}/{len(metricas)}')
     
-    global_series = m['global_series']
-    global_median = np.median(global_series)
+    # 1. R_stationary (valor estacionario)
+    R_stationary = m['R_stationary']
     
+    # 2. Magnitud media por canal (promedio de los 4 canales)
+    mag_channel = m['mag_channel_mean_final']  # Array de 4 valores
+    mag_channel_mean = np.mean(mag_channel)
+    
+    # 3. PSD_slope
     PSD_slope = m['PSD_slope']
+    
+    # 4. DFA_alpha
     DFA_alpha = m['DFA_alpha']
     
-    MI_matrix = m['MI_matrix']
-    mi_values = MI_matrix[np.triu_indices_from(MI_matrix, k=1)]
-    MI_median = np.median(mi_values)
+    # 5. Mutual Info
+    MI = m['mutual_info']
     
-    entropy_dict = m['entropy_by_channel']
-    entropy_values = [entropy_dict[f'Canal_{i}'] for i in range(4)]
-    Entropy_median = np.median(entropy_values)
-    
-    corr_matrix = m['correlation_matrix']
-    corr_values = corr_matrix[np.triu_indices_from(corr_matrix, k=1)]
-    Corr_median = np.median(corr_values)
+    # 6. Entropía Shannon por canal (promedio de los 4 canales)
+    shannon_entropy = m['shannon_entropy_by_channel']  # Array de 4 valores
+    shannon_entropy_mean = np.mean(shannon_entropy)
     
     resultados.append({
         'label': m['label'],
-        'R_median': R_median,
-        'R_final': R_final,
-        'Global_median': global_median,
+        'R_stationary': R_stationary,
+        'mag_channel_mean': mag_channel_mean,
         'PSD_slope': PSD_slope,
         'DFA_alpha': DFA_alpha,
-        'MI_median': MI_median,
-        'Entropy_median': Entropy_median,
-        'Corr_median': Corr_median,
+        'mutual_info': MI,
+        'shannon_entropy_mean': shannon_entropy_mean,
     })
 
 df = pd.DataFrame(resultados)
+print(f'✅ Métricas calculadas para {len(df)} imágenes')
+print()
 
 # Crear directorio para gráficas por clase
-os.makedirs('resultados_kuramoto_full_dataset_CORRECTED/graficas_por_clase', exist_ok=True)
+os.makedirs('resultados_kuramoto_TRAIN_MAC_60k/graficas_por_clase', exist_ok=True)
 
-# Definir métricas con sus características
+# Definir las 6 métricas principales con sus características
 metricas_info = {
-    'R_median': {
-        'nombre': 'R (Parámetro de Orden) - Mediana',
-        'xlabel': 'R (mediana temporal)',
+    'R_stationary': {
+        'nombre': 'R (Parámetro de Orden) - Valor Estacionario',
+        'xlabel': 'R (valor estacionario)',
         'objetivo': 0.5,
-        'color': 'blue'
+        'color': 'blue',
+        'descripcion': 'Sincronización de osciladores en estado estacionario'
     },
-    'R_final': {
-        'nombre': 'R final (Valor Estacionario)',
-        'xlabel': 'R (valor final)',
+    'mag_channel_mean': {
+        'nombre': 'Magnitud Media por Canal (promedio 4 canales)',
+        'xlabel': 'Magnitud media',
         'objetivo': None,
-        'color': 'darkblue'
-    },
-    'Global_median': {
-        'nombre': 'Magnitud Global - Mediana',
-        'xlabel': 'Magnitud Global (mediana)',
-        'objetivo': None,
-        'color': 'green'
+        'color': 'green',
+        'descripcion': 'Actividad media de los 4 canales de osciladores'
     },
     'PSD_slope': {
-        'nombre': 'PSD Slope (Ley de Potencias)',
+        'nombre': 'PSD Slope (Pendiente del Espectro de Potencia)',
         'xlabel': 'Pendiente PSD',
-        'objetivo': -1.0,
-        'color': 'red'
+        'objetivo': -2.0,
+        'color': 'red',
+        'descripcion': 'Exponente de la ley de potencia 1/f^α (-2 = ruido rosa/criticalidad)'
     },
     'DFA_alpha': {
-        'nombre': 'DFA Alpha (Fluctuaciones)',
+        'nombre': 'DFA Alpha (Exponente de Fluctuaciones)',
         'xlabel': 'α (DFA)',
         'objetivo': 1.0,
-        'color': 'purple'
+        'color': 'purple',
+        'descripcion': 'Correlaciones de largo alcance (1.0 = ruido 1/f/criticalidad)'
     },
-    'MI_median': {
-        'nombre': 'Mutual Information - Mediana',
-        'xlabel': 'MI (mediana entre canales)',
+    'mutual_info': {
+        'nombre': 'Mutual Information (Información Mutua)',
+        'xlabel': 'MI (nats)',
         'objetivo': None,
-        'color': 'orange'
+        'color': 'orange',
+        'descripcion': 'Dependencia estadística entre mitades de la serie temporal'
     },
-    'Entropy_median': {
-        'nombre': 'Entropía de Shannon - Mediana',
+    'shannon_entropy_mean': {
+        'nombre': 'Entropía de Shannon (promedio 4 canales)',
         'xlabel': 'Entropía (bits)',
         'objetivo': None,
-        'color': 'brown'
-    },
-    'Corr_median': {
-        'nombre': 'Correlación - Mediana',
-        'xlabel': 'Correlación (mediana entre canales)',
-        'objetivo': None,
-        'color': 'magenta'
+        'color': 'brown',
+        'descripcion': 'Complejidad/aleatoriedad promedio de los 4 canales'
     }
 }
 
@@ -274,8 +275,8 @@ Kurtosis:              {kurt:.6f}
         plt.tight_layout()
         
         # Guardar en PDF
-        filename = f'resultados_kuramoto_full_dataset_CORRECTED/graficas_por_clase/clase_{clase:02d}_{metrica}.pdf'
-        plt.savefig(filename, format='pdf', bbox_inches='tight')
+        filename = f'resultados_kuramoto_TRAIN_MAC_60k/graficas_por_clase/clase_{clase:02d}_{metrica}.pdf'
+        plt.savefig(filename, format='pdf', bbox_inches='tight', dpi=150)
         plt.close()
         
         total_graficas += 1
@@ -288,7 +289,17 @@ Kurtosis:              {kurt:.6f}
 print()
 print('='*80)
 print('✅ GRÁFICAS POR CLASE COMPLETADAS')
-print(f'   Directorio: resultados_kuramoto_full_dataset_CORRECTED/graficas_por_clase/')
-print(f'   Total: {total_graficas} archivos PDF generados')
-print(f'   Estructura: clase_XX_<metrica>.pdf')
+print('='*80)
+print(f'📂 Directorio: resultados_kuramoto_TRAIN_MAC_60k/graficas_por_clase/')
+print(f'📊 Total: {total_graficas} archivos PDF generados')
+print(f'📝 Estructura: clase_XX_<metrica>.pdf')
+print()
+print('📋 Métricas analizadas:')
+for i, (metrica, info) in enumerate(metricas_info.items(), 1):
+    print(f'   {i}. {info["nombre"]}')
+print()
+print('🎯 Objetivos de criticalidad:')
+print('   - R_stationary: 0.5 (sincronización parcial)')
+print('   - PSD_slope: -2.0 (ruido rosa, ley 1/f²)')
+print('   - DFA_alpha: 1.0 (ruido 1/f, criticalidad)')
 print('='*80)
