@@ -1,4 +1,4 @@
-"""
+Apero"""
 Implementación del modelo Kuramoto minimalista y utilidades asociadas.
 """
 import torch
@@ -225,6 +225,37 @@ class KBlock(nn.Module):
             return x, xs, es
         else:
             return x, xs
+
+    def forward_with_params(self, x, T_steps=100, gamma=0.7, del_t=0.9):
+        """
+        Wrapper para ejecutar forward con parámetros específicos.
+        Útil para grid search de parámetros.
+        
+        Args:
+            x: Imagen de entrada [1, 1, H, W]
+            T_steps: Número de pasos temporales
+            gamma: Factor de acoplamiento
+            del_t: Paso temporal de integración
+            
+        Returns:
+            xs: Lista de estados
+            es: Lista de energías
+        """
+        # Crear campo de acoplamiento desde la imagen
+        c = torch.zeros_like(x.expand(-1, self.ch, -1, -1))
+        
+        # Ejecutar dinámica
+        x_final, xs, es = self.forward(
+            x.expand(-1, self.ch, -1, -1),
+            c,
+            T=T_steps,
+            gamma=gamma,
+            del_t=del_t,
+            return_xs=True,
+            return_es=True
+        )
+        
+        return xs, es
 
 
 class Reshape(nn.Module):
