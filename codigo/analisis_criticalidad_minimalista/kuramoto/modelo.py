@@ -1,4 +1,4 @@
-Apero"""
+"""
 Implementación del modelo Kuramoto minimalista y utilidades asociadas.
 """
 import torch
@@ -226,7 +226,7 @@ class KBlock(nn.Module):
         else:
             return x, xs
 
-    def forward_with_params(self, x, T_steps=100, gamma=0.7, del_t=0.9):
+    def forward_with_params(self, x, T_steps=100, gamma=0.7, del_t=0.9, c_image=None, alpha=1.0):
         """
         Wrapper para ejecutar forward con parámetros específicos.
         Útil para grid search de parámetros.
@@ -241,9 +241,22 @@ class KBlock(nn.Module):
             xs: Lista de estados
             es: Lista de energías
         """
-        # Crear campo de acoplamiento desde la imagen
-        c = torch.zeros_like(x.expand(-1, self.ch, -1, -1))
-        
+        # Crear campo de acoplamiento desde la imagen si se provee
+        B = x.shape[0]
+        if c_image is None:
+            c = torch.zeros_like(x.expand(-1, self.ch, -1, -1))
+        else:
+            # c_image puede ser [1,H,W] o [H,W]; expandir a [B,ch,H,W]
+            ci = c_image
+            if ci.ndim == 2:
+                ci = ci.unsqueeze(0)
+            if ci.ndim == 3:
+                ci = ci.unsqueeze(0) if ci.shape[0] == 1 else ci
+            # ahora ci tiene shape [1,1,H,W]
+            ci = ci.to(x.device)
+            # expandir canales
+            c = ci.expand(B, self.ch, ci.shape[-2], ci.shape[-1]) * alpha
+
         # Ejecutar dinámica
         x_final, xs, es = self.forward(
             x.expand(-1, self.ch, -1, -1),

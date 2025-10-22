@@ -71,6 +71,42 @@ class KuramotoMetrics:
         mag_map = torch.linalg.norm(x, dim=0)  # shape [H, W]
         return mag_map
 
+    @staticmethod
+    def compute_alpha_c(R_alpha, alphas, smoothing=3):
+        """
+        Calcula alpha_c a partir de una curva R(alpha).
+
+        Args:
+            R_alpha: array-like con valores de R para cada alpha (misma longitud que alphas)
+            alphas: array-like de valores de alpha
+            smoothing: ventana para suavizar antes de derivar (int >=1)
+
+        Returns:
+            alpha_c: valor de alpha asociado al máximo cambio (argmax del gradiente)
+            grad: array con gradiente (dR/dalpha)
+        """
+        import numpy as _np
+        R = _np.asarray(R_alpha)
+        a = _np.asarray(alphas)
+        if R.shape[0] != a.shape[0]:
+            raise ValueError("R_alpha y alphas deben tener la misma longitud")
+
+        # Suavizado simple por media móvil para reducir ruido en derivada
+        if smoothing is None or smoothing <= 1:
+            R_s = R
+        else:
+            kernel = _np.ones(smoothing) / float(smoothing)
+            R_s = _np.convolve(R, kernel, mode='same')
+
+        # Derivada numérica dR/da
+        grad = _np.gradient(R_s, a)
+
+        # alpha_c: alpha donde grad es máximo (mayor pendiente positiva)
+        idx = _np.nanargmax(_np.abs(grad))
+        alpha_c = float(a[idx])
+
+        return alpha_c, grad
+
 class Entropia:
     """Entropía de Shannon sobre series temporales."""
     @staticmethod
