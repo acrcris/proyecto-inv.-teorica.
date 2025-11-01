@@ -1,0 +1,1159 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='444' height='444' viewBox='0 0 444 444'>
+  <title>AKOrN KLayer (conv) connectivity | nodes: 144</title>
+  <line x1='60.00' y1='384.00' x2='24.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='60.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='96.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='132.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='168.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='204.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='240.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='276.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='312.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='348.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='384.00' x2='384.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='24.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='348.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='24.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='312.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='24.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='276.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='24.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='240.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='24.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='204.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='24.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='168.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='24.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='132.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='24.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='96.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='24.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='60.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='24.00' x2='24.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='24.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='24.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='24.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='24.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='24.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='24.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='24.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='24.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='24.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='24.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='384.00' x2='24.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='384.00' x2='60.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='96.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='132.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='168.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='204.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='240.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='276.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='312.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='348.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='384.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='384.00' x2='420.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='348.00' x2='24.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='348.00' x2='420.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='312.00' x2='24.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='312.00' x2='420.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='276.00' x2='24.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='276.00' x2='420.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='240.00' x2='24.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='240.00' x2='420.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='204.00' x2='24.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='204.00' x2='420.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='168.00' x2='24.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='168.00' x2='420.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='132.00' x2='24.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='132.00' x2='420.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='96.00' x2='24.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='96.00' x2='420.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='60.00' x2='24.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='60.00' x2='420.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='24.00' x2='24.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='24.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='24.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='24.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='24.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='24.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='24.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='24.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='24.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='24.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='24.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='24.00' x2='420.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='384.00' x2='60.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='384.00' x2='96.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='132.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='168.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='204.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='240.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='276.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='312.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='348.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='384.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='420.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='348.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='420.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='312.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='420.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='276.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='420.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='240.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='420.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='204.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='420.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='168.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='420.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='132.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='420.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='96.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='420.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='60.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='420.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='24.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='24.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='24.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='24.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='24.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='24.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='24.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='24.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='24.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='24.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='24.00' x2='420.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='420.00' x2='24.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='420.00' x2='60.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='420.00' x2='96.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='420.00' x2='132.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='420.00' x2='168.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='420.00' x2='204.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='420.00' x2='240.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='420.00' x2='276.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='420.00' x2='312.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='420.00' x2='348.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='420.00' x2='384.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='384.00' x2='24.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='384.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='24.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='348.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='24.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='312.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='24.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='276.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='24.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='240.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='24.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='204.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='24.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='168.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='24.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='132.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='24.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='96.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='24.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='60.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='24.00' x2='24.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='24.00' x2='60.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='24.00' x2='96.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='24.00' x2='132.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='24.00' x2='168.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='24.00' x2='204.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='24.00' x2='240.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='24.00' x2='276.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='24.00' x2='312.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='24.00' x2='348.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='24.00' x2='384.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='420.00' x2='60.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='420.00' x2='96.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='420.00' x2='132.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='420.00' x2='168.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='420.00' x2='204.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='420.00' x2='240.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='420.00' x2='276.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='420.00' x2='312.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='420.00' x2='348.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='420.00' x2='384.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='420.00' x2='420.00' y2='420.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='384.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='384.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='420.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='348.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='420.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='312.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='420.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='276.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='420.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='240.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='420.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='204.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='420.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='168.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='420.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='132.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='420.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='96.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='420.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='60.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='420.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='24.00' x2='60.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='24.00' x2='96.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='24.00' x2='132.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='24.00' x2='168.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='24.00' x2='204.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='24.00' x2='240.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='24.00' x2='276.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='24.00' x2='312.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='24.00' x2='348.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='24.00' x2='384.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='24.00' x2='420.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='420.00' x2='24.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='420.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='420.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='420.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='420.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='420.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='420.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='420.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='420.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='420.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='420.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='384.00' x2='24.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='384.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='24.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='348.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='24.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='312.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='24.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='276.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='24.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='240.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='24.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='204.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='24.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='168.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='24.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='132.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='24.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='96.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='24.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='60.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='96.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='132.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='168.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='204.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='240.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='276.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='312.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='348.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='60.00' x2='384.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='420.00' x2='24.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='420.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='420.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='420.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='420.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='420.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='420.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='420.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='420.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='420.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='420.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='420.00' x2='420.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='384.00' x2='24.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='384.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='384.00' x2='420.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='348.00' x2='24.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='348.00' x2='420.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='312.00' x2='24.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='312.00' x2='420.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='276.00' x2='24.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='276.00' x2='420.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='240.00' x2='24.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='240.00' x2='420.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='204.00' x2='24.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='204.00' x2='420.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='168.00' x2='24.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='168.00' x2='420.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='132.00' x2='24.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='132.00' x2='420.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='96.00' x2='24.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='96.00' x2='420.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='60.00' x2='24.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='60.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='96.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='132.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='168.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='204.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='240.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='276.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='312.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='348.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='384.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='420.00' y1='60.00' x2='420.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='420.00' x2='60.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='420.00' x2='96.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='420.00' x2='132.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='420.00' x2='168.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='420.00' x2='204.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='420.00' x2='240.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='420.00' x2='276.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='420.00' x2='312.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='420.00' x2='348.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='420.00' x2='384.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='420.00' x2='420.00' y2='384.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='384.00' x2='60.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='384.00' x2='96.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='384.00' x2='132.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='384.00' x2='168.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='384.00' x2='204.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='384.00' x2='240.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='384.00' x2='276.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='384.00' x2='312.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='384.00' x2='348.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='384.00' x2='384.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='384.00' x2='420.00' y2='348.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='348.00' x2='60.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='348.00' x2='96.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='348.00' x2='132.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='348.00' x2='168.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='348.00' x2='204.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='348.00' x2='240.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='348.00' x2='276.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='348.00' x2='312.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='348.00' x2='348.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='348.00' x2='384.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='348.00' x2='420.00' y2='312.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='312.00' x2='60.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='312.00' x2='96.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='312.00' x2='132.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='312.00' x2='168.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='312.00' x2='204.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='312.00' x2='240.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='312.00' x2='276.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='312.00' x2='312.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='312.00' x2='348.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='312.00' x2='384.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='312.00' x2='420.00' y2='276.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='276.00' x2='60.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='276.00' x2='96.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='276.00' x2='132.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='276.00' x2='168.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='276.00' x2='204.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='276.00' x2='240.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='276.00' x2='276.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='276.00' x2='312.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='276.00' x2='348.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='276.00' x2='384.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='276.00' x2='420.00' y2='240.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='240.00' x2='60.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='240.00' x2='96.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='240.00' x2='132.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='240.00' x2='168.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='240.00' x2='204.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='240.00' x2='240.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='240.00' x2='276.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='240.00' x2='312.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='240.00' x2='348.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='240.00' x2='384.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='240.00' x2='420.00' y2='204.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='204.00' x2='60.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='204.00' x2='96.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='204.00' x2='132.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='204.00' x2='168.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='204.00' x2='204.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='204.00' x2='240.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='204.00' x2='276.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='204.00' x2='312.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='204.00' x2='348.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='204.00' x2='384.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='204.00' x2='420.00' y2='168.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='168.00' x2='60.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='168.00' x2='96.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='168.00' x2='132.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='168.00' x2='168.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='168.00' x2='204.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='168.00' x2='240.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='168.00' x2='276.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='168.00' x2='312.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='168.00' x2='348.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='168.00' x2='384.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='168.00' x2='420.00' y2='132.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='132.00' x2='60.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='132.00' x2='96.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='132.00' x2='132.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='132.00' x2='168.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='132.00' x2='204.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='132.00' x2='240.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='132.00' x2='276.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='132.00' x2='312.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='132.00' x2='348.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='132.00' x2='384.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='132.00' x2='420.00' y2='96.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='96.00' x2='60.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='96.00' x2='96.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='96.00' x2='132.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='96.00' x2='168.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='96.00' x2='204.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='96.00' x2='240.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='96.00' x2='276.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='96.00' x2='312.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='96.00' x2='348.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='96.00' x2='384.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='96.00' x2='420.00' y2='60.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='24.00' y1='60.00' x2='60.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='60.00' y1='60.00' x2='96.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='96.00' y1='60.00' x2='132.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='132.00' y1='60.00' x2='168.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='168.00' y1='60.00' x2='204.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='204.00' y1='60.00' x2='240.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='240.00' y1='60.00' x2='276.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='276.00' y1='60.00' x2='312.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='312.00' y1='60.00' x2='348.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='348.00' y1='60.00' x2='384.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <line x1='384.00' y1='60.00' x2='420.00' y2='24.00' stroke='#555' stroke-opacity='0.6' stroke-width='1' />
+  <circle cx='420.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='60.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='276.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='312.00' cy='204.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='132.00' r='3.5' fill='#4daf4a' />
+  <circle cx='168.00' cy='24.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='348.00' r='3.5' fill='#4daf4a' />
+  <circle cx='24.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='384.00' cy='276.00' r='3.5' fill='#4daf4a' />
+  <circle cx='348.00' cy='168.00' r='3.5' fill='#4daf4a' />
+  <circle cx='240.00' cy='96.00' r='3.5' fill='#4daf4a' />
+  <circle cx='132.00' cy='420.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='420.00' cy='384.00' r='3.5' fill='#4daf4a' />
+  <circle cx='204.00' cy='312.00' r='3.5' fill='#4daf4a' />
+  <circle cx='96.00' cy='240.00' r='3.5' fill='#4daf4a' />
+  <circle cx='60.00' cy='204.00' r='3.5' fill='#4daf4a' />
+</svg>
