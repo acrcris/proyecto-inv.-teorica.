@@ -4,19 +4,13 @@ Genera gráficas específicas para análisis detallado.
 """
 import json
 import numpy as np
-import os
-from pathlib import Path
-"""Configurar caché de Matplotlib en carpeta local y backend Agg."""
-_mpl_dir = Path(__file__).parent / "_mplconfig"
-try:
-    _mpl_dir.mkdir(parents=True, exist_ok=True)
-    os.environ.setdefault("MPLCONFIGDIR", str(_mpl_dir))
-except Exception:
-    pass
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 import argparse
+from pathlib import Path
+import matplotlib.pyplot as plt
+from utils import setup_matplotlib, save_figure
+
+# Configurar matplotlib al inicio
+setup_matplotlib()
 
 
 def plot_single_class_analysis(results_data, output_dir):
@@ -117,7 +111,7 @@ def plot_single_class_analysis(results_data, output_dir):
     
     # Guardar
     output_file = output_dir / f'analisis_clase_{target_class}_optimizado.png'
-    plt.savefig(output_file, dpi=300, bbox_inches='tight')
+    save_figure(fig, output_file)
     print(f"✓ Análisis detallado guardado en: {output_file}")
     plt.close()
     
@@ -174,7 +168,7 @@ def plot_parameter_summary(results_data, output_dir):
     plt.tight_layout()
     
     output_file = output_dir / f'parametros_clase_{settings["target_class"]}.png'
-    plt.savefig(output_file, dpi=300, bbox_inches='tight')
+    save_figure(fig, output_file)
     print(f"✓ Resumen de parámetros guardado en: {output_file}")
     plt.close()
     

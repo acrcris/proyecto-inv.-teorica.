@@ -11,11 +11,14 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import torch
-import torch.nn.functional as F
 
 from datasets.loader import MNISTLoader
 from kuramoto.modelo import KBlock
 from analisis.criticalidad import KuramotoMetrics
+from utils import get_device, generate_alphas, prepare_image, setup_matplotlib, save_figure
+
+# Configurar matplotlib
+setup_matplotlib()
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -51,33 +54,6 @@ def _build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _prepare_device(explicit: str | None = None) -> torch.device:
-    if explicit is not None:
-        return torch.device(explicit)
-    if torch.cuda.is_available():
-        return torch.device("cuda")
-    if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
-        return torch.device("mps")
-    return torch.device("cpu")
-
-
-def _generate_alphas(start: float, end: float, step: float) -> np.ndarray:
-    count = int(np.floor((end - start) / step)) + 1
-    return start + step * np.arange(count, dtype=np.float64)
-
-
-def _prepare_image(img: torch.Tensor, img_size: int, ch: int, device: torch.device) -> torch.Tensor:
-    """
-    Prepara imagen para el modelo Kuramoto.
-    Consistente con código de referencia: NO añade batch dimension aquí.
-    """
-    if img.shape[-1] != img_size:
-        img = F.interpolate(img.unsqueeze(0), size=(img_size, img_size), 
-                          mode="bilinear", align_corners=False)[0]
-    img_channels = img.repeat(ch, 1, 1)  # [ch, H, W]
-    return img_channels.to(device)
-
-
 def main() -> None:
     parser = _build_parser()
     args = parser.parse_args()
@@ -85,7 +61,7 @@ def main() -> None:
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
 
-    device = _prepare_device(args.device)
+    device = get_device(args.device or 'auto')
     
     print(f"\n{'='*70}")
     print(f"Análisis de UNA imagen individual")
@@ -137,10 +113,10 @@ def main() -> None:
     kblock.eval()
 
     # Preparar imagen
-    c_base = _prepare_image(target_img, args.img_size, args.ch, device)
+    c_base = prepare_image(target_img, args.img_size, args.ch, device)
 
     # Generar valores de alpha (más denso para curva suave)
-    alphas = _generate_alphas(args.alpha_start, args.alpha_end, args.alpha_step)
+    alphas = generate_alphas(args.alpha_start, args.alpha_end, args.alpha_step)
     print(f"Evaluando {len(alphas)} puntos de α en [{args.alpha_start}, {args.alpha_end}]...\n")
 
     # Calcular R(α) - Consistente con código de referencia
@@ -261,7 +237,7 @@ def main() -> None:
     
     # Guardar gráfica
     output_plot = args.output.parent / f'curva_R_alpha_clase{args.target_class}_img{args.image_index}.png'
-    plt.savefig(output_plot, dpi=300, bbox_inches='tight')
+    save_figure(fig, output_plot)
     print(f"✓ Gráfica guardada en: {output_plot}\n")
     
     # Mostrar gráfica

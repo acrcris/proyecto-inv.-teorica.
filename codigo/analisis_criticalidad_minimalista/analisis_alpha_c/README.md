@@ -1,6 +1,37 @@
-# Análisis de Alpha Crítico (α_c)
+# Análisis de Criticalidad - Alpha_c
 
-Esta carpeta contiene todos los scripts y datos relacionados con el análisis de criticalidad mediante el parámetro α_c en imágenes MNIST usando dinámica de Kuramoto.
+Scripts para analizar el parámetro crítico α_c en el modelo Kuramoto aplicado a clasificación de dígitos MNIST.
+
+---
+
+## 📊 Estado Actual del Análisis
+
+**Base de datos:** `resultados_criticalidad.db` (SQLite)
+- **Imágenes procesadas:** 1,579/60,000 (2.6%)
+- **Inicio:** 2025-11-01 06:44:42
+- **Última actualización:** 2025-11-02 01:03:49
+
+### 🚀 Comandos Rápidos
+
+```bash
+# Ejecutar el análisis
+cd analisis_alpha_c
+nohup python analizar_con_sqlite.py > analisis_sqlite.log 2>&1 &
+
+# Monitorear progreso (actualización única)
+./monitor_analisis.sh
+
+# Monitorear continuamente (cada 60 segundos)
+./monitor_continuo.sh
+
+# Ver log en tiempo real
+tail -f analisis_sqlite.log
+
+# Consulta rápida de progreso
+sqlite3 resultados_criticalidad.db "SELECT COUNT(*) as procesadas, ROUND(COUNT(*)*100.0/60000,2)||'%' as progreso FROM resultados;"
+```
+
+---
 
 ## 📁 Estructura
 

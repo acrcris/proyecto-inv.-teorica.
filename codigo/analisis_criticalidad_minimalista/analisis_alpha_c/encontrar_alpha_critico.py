@@ -9,11 +9,11 @@ from typing import Dict, List
 
 import numpy as np
 import torch
-import torch.nn.functional as F
 
 from datasets.loader import MNISTLoader
 from kuramoto.modelo import KBlock
 from analisis.criticalidad import KuramotoMetrics
+from utils import get_device, generate_alphas, prepare_image
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -34,28 +34,6 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--device", type=str)
     parser.add_argument("--window", type=int, default=5, help="Número de pasos finales a promediar en R(t)")
     return parser
-
-
-def _prepare_device(explicit: str | None = None) -> torch.device:
-    if explicit is not None:
-        return torch.device(explicit)
-    if torch.cuda.is_available():
-        return torch.device("cuda")
-    if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
-        return torch.device("mps")
-    return torch.device("cpu")
-
-
-def _generate_alphas(start: float, end: float, step: float) -> np.ndarray:
-    count = int(np.floor((end - start) / step)) + 1
-    return start + step * np.arange(count, dtype=np.float64)
-
-
-def _prepare_image(img: torch.Tensor, img_size: int, ch: int, device: torch.device) -> torch.Tensor:
-    if img.shape[-1] != img_size:
-        img = F.interpolate(img.unsqueeze(0), size=(img_size, img_size), mode="bilinear", align_corners=False)[0]
-    img_channels = img.repeat(ch, 1, 1)
-    return img_channels.unsqueeze(0).to(device)
 
 
 def _estimate_alpha_curve(
@@ -106,12 +84,12 @@ def main() -> None:
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
 
-    device = _prepare_device(args.device)
+    device = get_device(args.device or 'auto')
 
     loader = MNISTLoader(root=str(args.mnist_root), img_size=args.img_size)
     dataset = loader.train_dataset
 
-    alphas = _generate_alphas(args.alpha_start, args.alpha_end, args.alpha_step)
+    alphas = generate_alphas(args.alpha_start, args.alpha_end, args.alpha_step)
 
     ch = 4
     kblock = KBlock(
@@ -135,7 +113,7 @@ def main() -> None:
         if counts[label] >= args.max_images_per_class:
             continue
 
-        c_base = _prepare_image(img, args.img_size, ch, device)
+        c_base = prepare_image(img, args.img_size, ch, device)
         order_curve = _estimate_alpha_curve(
             kblock,
             c_base,

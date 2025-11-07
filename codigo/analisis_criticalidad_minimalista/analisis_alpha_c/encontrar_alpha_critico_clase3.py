@@ -11,11 +11,11 @@ from typing import List
 
 import numpy as np
 import torch
-import torch.nn.functional as F
 
 from datasets.loader import MNISTLoader
 from kuramoto.modelo import KBlock
 from analisis.criticalidad import KuramotoMetrics
+from utils import get_device, generate_alphas, prepare_image
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -52,33 +52,6 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--window", type=int, default=5,
                        help="Número de pasos finales a promediar en R(t)")
     return parser
-
-
-def _prepare_device(explicit: str | None = None) -> torch.device:
-    if explicit is not None:
-        return torch.device(explicit)
-    if torch.cuda.is_available():
-        return torch.device("cuda")
-    if getattr(torch.backends, "mps", None) and torch.backends.mps.is_available():
-        return torch.device("mps")
-    return torch.device("cpu")
-
-
-def _generate_alphas(start: float, end: float, step: float) -> np.ndarray:
-    count = int(np.floor((end - start) / step)) + 1
-    return start + step * np.arange(count, dtype=np.float64)
-
-
-def _prepare_image(img: torch.Tensor, img_size: int, ch: int, device: torch.device) -> torch.Tensor:
-    """
-    Prepara imagen para el modelo Kuramoto.
-    Consistente con código de referencia: NO añade batch dimension aquí.
-    """
-    if img.shape[-1] != img_size:
-        img = F.interpolate(img.unsqueeze(0), size=(img_size, img_size), 
-                          mode="bilinear", align_corners=False)[0]
-    img_channels = img.repeat(ch, 1, 1)  # [ch, H, W]
-    return img_channels.to(device)
 
 
 def _estimate_alpha_curve(
@@ -143,7 +116,7 @@ def main() -> None:
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
 
-    device = _prepare_device(args.device)
+    device = get_device(args.device or 'auto')
     
     print(f"\n{'='*70}")
     print(f"Análisis de α_c para la clase {args.target_class}")
@@ -165,7 +138,7 @@ def main() -> None:
     dataset = loader.train_dataset
 
     # Generar valores de alpha
-    alphas = _generate_alphas(args.alpha_start, args.alpha_end, args.alpha_step)
+    alphas = generate_alphas(args.alpha_start, args.alpha_end, args.alpha_step)
     print(f"Puntos de alpha a evaluar: {len(alphas)}\n")
 
     # Construir KBlock con los parámetros especificados
@@ -204,7 +177,7 @@ def main() -> None:
     for i, img in enumerate(target_images, 1):
         print(f"  Imagen {i}/{len(target_images)}...", end=" ")
         
-        c_base = _prepare_image(img, args.img_size, args.ch, device)
+        c_base = prepare_image(img, args.img_size, args.ch, device)
         
         # Calcular curva R(alpha) para esta imagen
         order_curve = _estimate_alpha_curve(

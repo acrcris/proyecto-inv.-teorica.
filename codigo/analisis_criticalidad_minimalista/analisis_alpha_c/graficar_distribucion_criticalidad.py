@@ -13,6 +13,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import argparse
 import os
+from utils import setup_matplotlib, save_figure
+
+# Configurar matplotlib
+setup_matplotlib()
 
 
 parser = argparse.ArgumentParser(description='Graficar distribución de α_c por clase')
@@ -57,6 +61,7 @@ axs[1].set_ylabel('α_c')
 axs[1].grid(True, alpha=0.3)
 
 plt.tight_layout()
-fig.savefig(os.path.join(args.output, 'distribucion_criticalidad.png'), dpi=150)
-print(f"Gráfica guardada en: {os.path.join(args.output, 'distribucion_criticalidad.png')}")
+output_path = os.path.join(args.output, 'distribucion_criticalidad.png')
+save_figure(fig, output_path, dpi=150)
+print(f"Gráfica guardada en: {output_path}")
 plt.show()

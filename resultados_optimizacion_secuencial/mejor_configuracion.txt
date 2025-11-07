@@ -1,0 +1,15 @@
+MEJOR CONFIGURACIÓN ENCONTRADA
+==================================================
+
+Parámetros:
+  T_steps: 125
+  gamma: 1.1
+  del_t: 1.1
+  init_omg: 0.05
+  ksize: 11
+
+Métricas (validación con 500 imágenes):
+  R_final: 0.0107
+  DFA α: 1.4897
+  PSD slope: -1.2466
+  Score: 1.0783
