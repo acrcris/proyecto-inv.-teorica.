@@ -25,6 +25,8 @@ ENV/
 
 # Data y outputs de entrenamiento
 data/
+!data/
+!source/data/__init__.py
 runs/
 outputs/
 outputs copy/
