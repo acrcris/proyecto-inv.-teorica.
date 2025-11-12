@@ -1,0 +1,15 @@
+# Git attributes para proyecto AKOrN modificado
+
+# Archivos modificados por nosotros (marcar en diffs)
+codigo/akorn/train_classification.py linguist-language=Python linguist-generated=false
+codigo/akorn/setup_mnist.py linguist-language=Python linguist-generated=false
+codigo/akorn/train_mnist.sh linguist-language=Shell linguist-generated=false
+
+# Archivos originales de AKOrN (no modificados)
+codigo/akorn/source/** linguist-vendored=true
+
+# Documentación nuestra
+codigo/akorn/GUIA_MNIST.md linguist-documentation
+codigo/akorn/GUIA_COLAB_GPU.md linguist-documentation
+codigo/akorn/INICIO_RAPIDO_VSCODE_COLAB.md linguist-documentation
+codigo/akorn/ORIGEN_Y_MODIFICACIONES.md linguist-documentation
