@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Data y outputs de entrenamiento
+data/
+runs/
+outputs/
+outputs copy/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Logs
+*.log
+logs/
+wandb/
+
+# Imágenes y visualizaciones
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.tiff
+
+# Videos
+*.mp4
+*.avi
+*.mov
+
+# Archivos temporales
+*.tmp
+*.temp
+*.cache
+.DS_Store
+Thumbs.db
+
+# TensorBoard
+events.out.tfevents.*
+
+# Archivos de procesos
+*.pid
+
+# Bases de datos
+*.db
+*.sqlite
+*.sqlite3

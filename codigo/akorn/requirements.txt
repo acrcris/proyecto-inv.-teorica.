@@ -1,0 +1,25 @@
+torch
+torchvision
+torchaudio
+einops
+jupyter
+matplotlib
+tensorboard
+tqdm
+argparse
+git+https://github.com/fra31/auto-attack
+# macOS (Apple Silicon) TensorFlow packages
+tensorflow-macos; platform_system == "Darwin"
+tensorflow-metal; platform_system == "Darwin"
+# Fallback for non-macOS environments
+tensorflow; platform_system != "Darwin"
+ema_pytorch
+accelerate
+scipy
+scikit-learn
+scikit-image
+timm
+opencv-python
+pycocotools
+fastcluster
+pandas
