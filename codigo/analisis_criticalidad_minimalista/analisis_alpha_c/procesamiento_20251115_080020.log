@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/acrcr/Documents/Unal-2025-2/IntroInvTeorica/proyecto/codigo/analisis_criticalidad_minimalista/analisis_alpha_c/calcular_c_critico_local.py", line 54, in <module>
+    from source.models.kuramoto import KBlock
+ModuleNotFoundError: No module named 'source.models.kuramoto'

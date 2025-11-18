@@ -1,0 +1,14 @@
+[0;32m╔════════════════════════════════════════════════════════════╗[0m
+[0;32m║  PROCESAMIENTO C_CRÍTICO CON AUTO-REINICIO AUTOMÁTICO     ║[0m
+[0;32m╚════════════════════════════════════════════════════════════╝[0m
+
+
+[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1;33m   Intento #1 de 100[0m
+[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+📝 Log: procesamiento_20251117_044506.log
+🚀 Iniciando procesamiento...
+🔋 Activando prevención de suspensión (caffeinate)...
+
+./ejecutar_con_reinicio_automatico.sh: line 132: 29450 Killed: 9               caffeinate -dimsu python calcular_c_critico_local.py --clases $CLASES --device auto > "$LOG_FILE" 2>&1

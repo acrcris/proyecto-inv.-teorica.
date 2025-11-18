@@ -1,0 +1,64 @@
+======================================================================
+CÁLCULO DE R vs C - MNIST TRAINING SET
+======================================================================
+
+🖥️  DISPOSITIVO:
+   - MPS (Apple Metal)
+   - PyTorch device: mps
+
+📌 CONFIGURACIÓN (IDÉNTICA AL NOTEBOOK):
+   - CH (canales): 3
+   - N (dimensión): 3
+   - KSIZE (kernel): 3
+   - T (pasos): 30
+   - Semilla: 1
+   - Rango C: [0.0, 0.4]
+   - Puntos C: 40
+   - Espaciado C: 0.02
+   - Base de datos: mnist_R_vs_C.db
+   - Checkpoints cada: 50 imágenes
+   - Clases a procesar: [9]
+
+📂 Inicializando base de datos...
+✅ Base de datos lista: mnist_R_vs_C.db
+
+📂 Cargando MNIST Training Set...
+✅ Dataset cargado: 60,000 imágenes
+
+📊 Progreso actual:
+   - Total procesadas: 10,440/60,000
+   - Clase 0: 3,662 imágenes
+   - Clase 1: 500 imágenes
+   - Clase 2: 4,361 imágenes
+   - Clase 3: 1,000 imágenes
+   - Clase 4: 791 imágenes
+   - Clase 5: 0 imágenes
+   - Clase 6: 0 imágenes
+   - Clase 7: 0 imágenes
+   - Clase 8: 0 imágenes
+   - Clase 9: 126 imágenes
+
+🧠 Inicializando modelo Kuramoto...
+✅ Modelo inicializado en mps
+   c_norm=None, use_omega_c=False (igual que notebook)
+
+🎲 Creando estado inicial x_init...
+✅ Estado inicial creado con forma torch.Size([1, 3, 64, 64])
+   ⚠️  CRÍTICO: x_init se reutilizará para TODAS las imágenes
+
+⏱️  ESTIMACIÓN:
+   - Imágenes restantes: 49,560
+   - Velocidad estimada: ~2.5 img/s
+   - Tiempo estimado: 5.5 horas
+
+======================================================================
+PROCESANDO...
+======================================================================
+
+Procesando imágenes:   0%|                                                                   | 0/60000 [00:00<?, ?img/s]Procesando imágenes:   0%|                                                          | 24/60000 [00:01<47:57, 20.84img/s]
+Traceback (most recent call last):
+  File "/Users/acrcr/Documents/Unal-2025-2/IntroInvTeorica/proyecto/codigo/analisis_criticalidad_minimalista/analisis_RvsC/calcular_r_vs_c.py", line 498, in <module>
+    main()
+  File "/Users/acrcr/Documents/Unal-2025-2/IntroInvTeorica/proyecto/codigo/analisis_criticalidad_minimalista/analisis_RvsC/calcular_r_vs_c.py", line 447, in main
+    conteo[clase] += 1
+NameError: name 'conteo' is not defined

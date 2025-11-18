@@ -308,9 +308,14 @@ def main():
     total_images = len(dataset)
     print(f"✓ Dataset cargado: {total_images} imágenes")
     
-    # Filtrar imágenes no procesadas
-    pending_indices = [i for i in range(total_images) if i not in processed_indices]
-    print(f"\nImágenes pendientes: {len(pending_indices)}/{total_images}")
+    # SOLO PROCESAR CLASE 5
+    print("\n⚠️  MODO: Solo procesando clase 5")
+    clase_5_indices = [i for i in range(total_images) if dataset[i][1] == 5]
+    print(f"   Total imágenes clase 5: {len(clase_5_indices)}")
+    
+    # Filtrar imágenes no procesadas de clase 5
+    pending_indices = [i for i in clase_5_indices if i not in processed_indices]
+    print(f"\nImágenes pendientes (clase 5): {len(pending_indices)}/{len(clase_5_indices)}")
     
     if len(pending_indices) == 0:
         print("\n✅ Todas las imágenes ya fueron procesadas!")

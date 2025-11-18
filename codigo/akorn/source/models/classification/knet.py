@@ -51,6 +51,7 @@ class AKOrN(nn.Module):
         norm="bn",
         c_norm="gn",
         gamma=1.0,
+        c_scale=1.0,
         use_omega=True,
         init_omg=1.0,
         global_omg=True,
@@ -64,6 +65,7 @@ class AKOrN(nn.Module):
         self.L = L
         self.ensemble = ensemble
         self.gamma = nn.Parameter(torch.tensor([gamma]), requires_grad=False)
+        self.c_scale = nn.Parameter(torch.tensor([c_scale]), requires_grad=False)
         
         # Expand parameters to match number of layers
         self.ns = self._expand_param(n, L)
@@ -185,7 +187,9 @@ class AKOrN(nn.Module):
         # Process through each layer
         for l, (transition_layer, _, k_layer, readout_layer, _) in enumerate(self.layers):
             x, c = transition_layer[0](x), transition_layer[1](c)
-            layer_xs, layer_es = k_layer(x, c, self.T[l], self.gamma)
+            # Scale c by c_scale parameter
+            c_scaled = c * self.c_scale
+            layer_xs, layer_es = k_layer(x, c_scaled, self.T[l], self.gamma)
             xs.append(layer_xs)
             es.append(layer_es)
             x = layer_xs[-1]

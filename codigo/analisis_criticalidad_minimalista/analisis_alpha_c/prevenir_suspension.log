@@ -1,0 +1,393 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔋 PREVENCIÓN DE SUSPENSIÓN ACTIVA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Este script mantendrá el Mac despierto mientras:
+   • calcular_c_critico_local.py esté corriendo
+   • O ejecutar_con_reinicio_automatico.sh esté activo
+
+   Para detener: kill $(cat prevenir_suspension.pid)
+
+🚀 Iniciando monitoreo...
+
+[04:52:46] 🟢 ACTIVO - Ciclo #60 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[04:57:50] 🟢 ACTIVO - Ciclo #120 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:02:53] 🟢 ACTIVO - Ciclo #180 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:07:56] 🟢 ACTIVO - Ciclo #240 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:12:59] 🟢 ACTIVO - Ciclo #300 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:18:02] 🟢 ACTIVO - Ciclo #360 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:23:06] 🟢 ACTIVO - Ciclo #420 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:28:09] 🟢 ACTIVO - Ciclo #480 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:33:12] 🟢 ACTIVO - Ciclo #540 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:38:15] 🟢 ACTIVO - Ciclo #600 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:43:19] 🟢 ACTIVO - Ciclo #660 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:48:22] 🟢 ACTIVO - Ciclo #720 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:53:25] 🟢 ACTIVO - Ciclo #780 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[05:58:28] 🟢 ACTIVO - Ciclo #840 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:03:31] 🟢 ACTIVO - Ciclo #900 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:08:34] 🟢 ACTIVO - Ciclo #960 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:13:37] 🟢 ACTIVO - Ciclo #1020 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:18:40] 🟢 ACTIVO - Ciclo #1080 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:23:44] 🟢 ACTIVO - Ciclo #1140 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:28:47] 🟢 ACTIVO - Ciclo #1200 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:33:50] 🟢 ACTIVO - Ciclo #1260 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:38:53] 🟢 ACTIVO - Ciclo #1320 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:43:56] 🟢 ACTIVO - Ciclo #1380 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:49:00] 🟢 ACTIVO - Ciclo #1440 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:54:03] 🟢 ACTIVO - Ciclo #1500 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[06:59:06] 🟢 ACTIVO - Ciclo #1560 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:04:10] 🟢 ACTIVO - Ciclo #1620 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:09:13] 🟢 ACTIVO - Ciclo #1680 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:14:17] 🟢 ACTIVO - Ciclo #1740 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:19:20] 🟢 ACTIVO - Ciclo #1800 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:24:23] 🟢 ACTIVO - Ciclo #1860 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:29:27] 🟢 ACTIVO - Ciclo #1920 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:34:30] 🟢 ACTIVO - Ciclo #1980 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:39:33] 🟢 ACTIVO - Ciclo #2040 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:44:36] 🟢 ACTIVO - Ciclo #2100 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:49:39] 🟢 ACTIVO - Ciclo #2160 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:54:43] 🟢 ACTIVO - Ciclo #2220 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[07:59:46] 🟢 ACTIVO - Ciclo #2280 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:04:49] 🟢 ACTIVO - Ciclo #2340 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:09:53] 🟢 ACTIVO - Ciclo #2400 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:14:57] 🟢 ACTIVO - Ciclo #2460 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:20:02] 🟢 ACTIVO - Ciclo #2520 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:25:07] 🟢 ACTIVO - Ciclo #2580 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:30:12] 🟢 ACTIVO - Ciclo #2640 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:35:17] 🟢 ACTIVO - Ciclo #2700 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:40:23] 🟢 ACTIVO - Ciclo #2760 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:45:30] 🟢 ACTIVO - Ciclo #2820 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:50:35] 🟢 ACTIVO - Ciclo #2880 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[08:55:40] 🟢 ACTIVO - Ciclo #2940 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:00:44] 🟢 ACTIVO - Ciclo #3000 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:05:49] 🟢 ACTIVO - Ciclo #3060 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:10:53] 🟢 ACTIVO - Ciclo #3120 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:15:56] 🟢 ACTIVO - Ciclo #3180 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:21:00] 🟢 ACTIVO - Ciclo #3240 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:26:05] 🟢 ACTIVO - Ciclo #3300 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:31:09] 🟢 ACTIVO - Ciclo #3360 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:36:14] 🟢 ACTIVO - Ciclo #3420 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:41:26] 🟢 ACTIVO - Ciclo #3480 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:46:32] 🟢 ACTIVO - Ciclo #3540 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:51:35] 🟢 ACTIVO - Ciclo #3600 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[09:56:39] 🟢 ACTIVO - Ciclo #3660 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[10:01:45] 🟢 ACTIVO - Ciclo #3720 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[10:06:49] 🟢 ACTIVO - Ciclo #3780 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[10:11:53] 🟢 ACTIVO - Ciclo #3840 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[10:16:56] 🟢 ACTIVO - Ciclo #3900 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             1
+      PreventUserIdleSystemSleep     1
+[10:22:00] 🟢 ACTIVO - Ciclo #3960 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[10:27:04] 🟢 ACTIVO - Ciclo #4020 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[10:32:07] 🟢 ACTIVO - Ciclo #4080 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[10:37:11] 🟢 ACTIVO - Ciclo #4140 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[10:42:14] 🟢 ACTIVO - Ciclo #4200 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[10:47:18] 🟢 ACTIVO - Ciclo #4260 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[10:52:21] 🟢 ACTIVO - Ciclo #4320 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[10:57:25] 🟢 ACTIVO - Ciclo #4380 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:02:28] 🟢 ACTIVO - Ciclo #4440 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:07:31] 🟢 ACTIVO - Ciclo #4500 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:12:34] 🟢 ACTIVO - Ciclo #4560 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:17:39] 🟢 ACTIVO - Ciclo #4620 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:22:42] 🟢 ACTIVO - Ciclo #4680 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:27:47] 🟢 ACTIVO - Ciclo #4740 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:32:51] 🟢 ACTIVO - Ciclo #4800 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:37:55] 🟢 ACTIVO - Ciclo #4860 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:42:58] 🟢 ACTIVO - Ciclo #4920 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:48:01] 🟢 ACTIVO - Ciclo #4980 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:53:04] 🟢 ACTIVO - Ciclo #5040 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[11:58:07] 🟢 ACTIVO - Ciclo #5100 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:03:11] 🟢 ACTIVO - Ciclo #5160 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:08:16] 🟢 ACTIVO - Ciclo #5220 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:13:19] 🟢 ACTIVO - Ciclo #5280 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:18:23] 🟢 ACTIVO - Ciclo #5340 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:23:28] 🟢 ACTIVO - Ciclo #5400 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:28:32] 🟢 ACTIVO - Ciclo #5460 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:33:37] 🟢 ACTIVO - Ciclo #5520 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:38:41] 🟢 ACTIVO - Ciclo #5580 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:43:44] 🟢 ACTIVO - Ciclo #5640 - Mac mantenido despierto
+   Assertions activas:
+      PreventSystemSleep             0
+      PreventUserIdleSystemSleep     1
+[12:45:57] 🔴 INACTIVO - No se detectaron procesos activos
+   Esperando 30 segundos antes de terminar...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━�━━━━━━━━━━━━━━━━━━━━━━━━━�✅ Procesamiento finalizado. Deteniendo prevención de suspensión.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━�━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

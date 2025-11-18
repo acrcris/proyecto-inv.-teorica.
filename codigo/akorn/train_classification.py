@@ -193,6 +193,7 @@ if __name__ == "__main__":
     parser.add_argument("--ch", type=int, default=64, help="Number of channels")
     parser.add_argument("--T", type=int, default=3, help="Timesteps")
     parser.add_argument("--gamma", type=float, default=1.0, help="Gamma parameter")
+    parser.add_argument("--c_scale", type=float, default=1.0, help="C scaling parameter")
     parser.add_argument("--J", type=str, default="conv", help="Connectivity type")
     parser.add_argument("--ksizes", nargs="+", type=int, default=[9, 7, 5], help="Kernel sizes")
     parser.add_argument("--ro_ksize", type=int, default=3, help="Readout kernel size")
@@ -277,6 +278,7 @@ if __name__ == "__main__":
         norm=args.norm,
         c_norm=args.c_norm,
         gamma=args.gamma,
+        c_scale=args.c_scale,
         use_omega=args.use_omega,
         init_omg=args.init_omg,
         global_omg=args.global_omg,
