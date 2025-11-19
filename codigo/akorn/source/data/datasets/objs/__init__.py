@@ -1,1 +1,0 @@
-# Object-centric datasets
