@@ -25,7 +25,11 @@ ENV/
 
 # Data y outputs de entrenamiento
 data/
-!data/
+!data/*.sh
+!data/*.py
+!data/*.md
+!data/sudoku-rrn/*.csv
+!data/tfloaders/*.py
 !source/data/__init__.py
 runs/
 outputs/
@@ -34,6 +38,10 @@ checkpoints/
 *.pth
 *.pt
 *.ckpt
+
+# Archivos grandes
+Archive.zip
+*.zip
 
 # Logs
 *.log
