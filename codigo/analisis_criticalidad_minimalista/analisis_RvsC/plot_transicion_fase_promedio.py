@@ -12,23 +12,29 @@ from pathlib import Path
 import sys
 
 # Configuración
-DB_PATH = Path("mnist_R_vs_C_COMBINED.db")
+DB_PATH = Path("R_vs_C.db")
 C_CRITICO = 0.1769
 OUTPUT = "transicion_fase_sincronizacion.png"
 
 # Rango de interés (zona lineal de transición)
 C_MIN_PLOT = 0.0
-C_MAX_PLOT = 0.25
+C_MAX_PLOT = 0.3
+
+# Parámetros para versión 0.25 (cambiar antes de ejecutar)
+# C_MAX_PLOT = 0.25
+# OUTPUT = "transicion_fase_sincronizacion_0-0.25.png"
 
 print("Cargando datos de la base de datos...")
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
 
-# Cargar todos los datos de todas las clases
+# Cargar todos los datos de todas las clases (0-9)
 all_c_values = []
 all_r_values = []
+total_curvas = 0
+total_puntos = 0
 
-for clase in range(10):
+for clase in range(10):  # Todas las clases 0-9
     print(f"  Cargando clase {clase}...")
     cursor.execute(f'SELECT c_values, r_values FROM clase_{clase}')
     rows = cursor.fetchall()
@@ -45,10 +51,13 @@ for clase in range(10):
         if len(c_filtered) > 0:
             all_c_values.append(c_filtered)
             all_r_values.append(r_filtered)
+            total_curvas += 1
+            total_puntos += len(c_filtered)
 
 conn.close()
 
-print(f"\nTotal de curvas cargadas: {len(all_c_values)}")
+print(f"\nTotal de curvas cargadas: {total_curvas}")
+print(f"Total de puntos (valores R) en rango [{C_MIN_PLOT}, {C_MAX_PLOT}]: {total_puntos:,}")
 
 # Interpolar todos los datos a una grilla común
 print("Interpolando datos a grilla común...")
@@ -81,16 +90,11 @@ ax.fill_between(c_grid, r_mean - r_std, r_mean + r_std,
 # Configuración de ejes y etiquetas
 ax.set_xlabel('Acoplamiento (C)', fontsize=14, fontweight='bold')
 ax.set_ylabel('Parámetro de orden final R(T)', fontsize=14, fontweight='bold')
-ax.set_title('Transición de fase de sincronización', fontsize=16, fontweight='bold')
+ax.set_title('Transición de fase de sincronización (todas las clases)', fontsize=16, fontweight='bold')
 ax.legend(fontsize=12, loc='lower right')
 ax.grid(True, alpha=0.3, linestyle='-', linewidth=0.5)
 ax.set_xlim([C_MIN_PLOT, C_MAX_PLOT])
 ax.set_ylim([0, 0.65])
-
-# Añadir texto con estadísticas
-textstr = f'N = {len(all_c_values):,} imágenes\nRango: [{C_MIN_PLOT}, {C_MAX_PLOT}]'
-ax.text(0.02, 0.98, textstr, transform=ax.transAxes, fontsize=10,
-        verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
 plt.tight_layout()
 plt.savefig(OUTPUT, dpi=300, bbox_inches='tight')
