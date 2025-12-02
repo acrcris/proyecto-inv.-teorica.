@@ -17,22 +17,27 @@
 \maketitle
 
 \begin{abstract}
+Los sistemas complejos exhiben transiciones de fase en las que pasan de estados desordenados a estados ordenados cuando un parámetro de control supera un umbral crítico. Un caso paradigmático es la sincronización de osciladores: por debajo del acoplamiento crítico las fases permanecen incoherentes y, al superarlo, emerge sincronía global, fenómeno que el modelo de Kuramoto describe de forma canónica \cite{Kuramoto1984,Strogatz2000}. En este trabajo estudiamos cómo estas transiciones de sincronización afectan el aprendizaje cuando las unidades de la red son osciladores acoplados que evolucionan según la dinámica de Kuramoto, implementados en el marco de \textit{Artificial Kuramoto Oscillatory Neurons} (AKOrN) \cite{Miyato2024}. Mostramos que, al barrer parámetros de acoplamiento, la red atraviesa un cambio cualitativo en su organización (de incoherente a parcialmente sincronizada) y que operar cerca de dicho punto crítico se asocia con correlaciones de largo alcance y un comportamiento computacionalmente ventajoso, en línea con la literatura sobre criticalidad neuronal \cite{Breakspear2010,ShewPlenz2013,Myrov2024}. Estos resultados conectan la física de sistemas fuera del equilibrio con el diseño de arquitecturas de aprendizaje que explotan sincronización para crear representaciones robustas.
 
-
-    \textit{Palabras claves:} sincronización, aprendizaje, redes neuronales aritificales.
+\textit{Palabras clave:} sincronización, criticalidad, transiciones de fase, Kuramoto, AKOrN, redes neuronales.
 \end{abstract}
 
 \section{Introducción}
 
+Los cambios de fase de desorden a orden son un rasgo de la física estadística: una variación suave de un parámetro externo puede inducir un cambio cualitativo en el comportamiento colectivo de un sistema. En poblaciones de osciladores de fase, el modelo de Kuramoto predice una transición continua (de segundo orden) entre un régimen incoherente y otro sincronizado cuando el acoplamiento supera un umbral crítico \cite{Kuramoto1984,Strogatz2000}. Cerca de ese punto crítico emergen correlaciones de largo alcance y fluctuaciones sin escala que se han propuesto como rasgos funcionales en el cerebro, donde operar “al borde de la criticidad” puede maximizar rango dinámico y transmisión de información \cite{ShewPlenz2013}.
+
+Motivados por estas observaciones, adoptamos el modelo \textit{Artificial Kuramoto Oscillatory Neurons} (AKOrN) como bloque dinámico en redes neuronales. En AKOrN, cada unidad es un oscilador cuya fase evoluciona bajo acoplamientos locales y entradas externas; la pila de capas aplica la actualización de Kuramoto durante varias iteraciones y un módulo de lectura genera estímulos para la siguiente capa. Esta construcción permite usar conectividades convolucionales (locales) o de atención (dinámicas), manteniendo compatibilidad con arquitecturas profundas modernas \cite{Miyato2024}. En paralelo, nos apoyamos en hallazgos recientes de modelado cerebral que relacionan la sincronización crítica con la aparición de correlaciones temporales de largo alcance (p. ej., exponentes DFA elevados) \cite{Myrov2024}. 
+
+A lo largo de este trabajo, exploramos cómo la red transita de estados desincronizados a estados parcialmente sincronizados al variar el acoplamiento y cómo esa cercanía a la transición crítica se refleja en métricas dinámicas (parámetro de orden, espectros 1/f, DFA) y en el rendimiento de aprendizaje. Esta perspectiva integra principios de sistemas complejos con el diseño de redes neuronales.
+
 La sincronización es un fenómeno en el cual diversas partes de un mismo sistema comparten una misma dinámica. Como consecuencia, emergen patrones coherentes en el sistema y estos dependen de la forma en la que cada una de las partes interacciona. Podemos llegar a entender estos comportamientos como  arreglos de osciladores acoplados entre si, donde las propiedades de la sincronización depende de las formas de acoplamiento. En general, la sincronización puede ser descrita mediante la ecuación (\ref{basica}), donde cada $\{\phi\}$ representa el conjunto de todos los $\phi_{i}$. Aquí se observa que la evolución de cada una de las partes del sistema depende de la forma en la que este interacciona con los demás elementos. 
-xx
 \begin{equation}
     \frac{d\phi_{i}}{dt}= f_{i}(\{\phi\})
     \label{basica}
 \end{equation}
 
 
-Para describir la sincronización de forma más precisa, utilizamos el modelo de  Yoshiki Kuramoto propuesto en 1984. Este modelo, dependiendo de las dinámicas, tiene diferenes formas, pero en escencia es la misma idea, la evolución temporal de la fase depende de las diferencias entre las fases con los vecinos más cercanos. Una de esas variantes corresponde a la ecuación (\ref{eq:kuramoto}), aquí debemos considerar un ensamble de osciladores acoplados según  los elementos de matriz $J_{ij}$, la frecuencia natural de oscilación $\omega_{i}$ y la diferencia de fase entre los osciladores. 
+Para describir la sincronización de forma más precisa, utilizamos el modelo de  Yoshiki Kuramoto propuesto en 1984\cite{Kuramoto1984}. Este modelo, dependiendo de las dinámicas, tiene diferenes formas, pero en escencia es la misma idea, la evolución temporal de la fase depende de las diferencias entre las fases con los vecinos más cercanos. Una de esas variantes corresponde a la ecuación (\ref{eq:kuramoto}), aquí debemos considerar un ensamble de osciladores acoplados según  los elementos de matriz $J_{ij}$, la frecuencia natural de oscilación $\omega_{i}$ y la diferencia de fase entre los osciladores. 
 
 \begin{equation} 
 \dot{\theta_{i}}= \omega_{i} + \sum_jJ_{ij}\sin(\theta_j - \theta_i)
@@ -242,5 +247,15 @@ En la figura \ref{fig:dis c critico} las distribuciones de $C_{\text{crítico}}$
 
     \item DE ARCANGELIS, Lucilla; HERRMANN, Hans J. Learning as a phenomenon occurring in a critical state. Proceedings of the National Academy of Sciences, 2010, vol. 107, no 9, p. 3977-3981.
 \end{itemize}
+
+\section{Bibliografía}
+\begin{thebibliography}{99}
+\bibitem{Kuramoto1984} Y. Kuramoto, \textit{Chemical Oscillations, Waves, and Turbulence}. Springer, 1984.
+\bibitem{Strogatz2000} S. H. Strogatz, “From Kuramoto to Crawford: exploring the onset of synchronization in populations of coupled oscillators,” \textit{Physica D}, vol. 143, pp. 1–20, 2000.
+\bibitem{Miyato2024} T. Miyato, \textit{et al.}, “Artificial Kuramoto Oscillatory Neurons (AKOrN),” arXiv:2410.13821, 2024.
+\bibitem{Breakspear2010} M. Breakspear, S. Heitmann, and A. Daffertshofer, “Generative models of cortical oscillations: neurobiological implications of the Kuramoto model,” \textit{Frontiers in Human Neuroscience}, vol. 4, 2010.
+\bibitem{ShewPlenz2013} W. L. Shew and D. Plenz, “The functional benefits of criticality in the cortex,” \textit{The Neuroscientist}, vol. 19, no. 1, pp. 88–100, 2013.
+\bibitem{Myrov2024} V. Myrov, \textit{et al.}, “Hierarchical whole-brain modeling of critical synchronization dynamics in human brains,” bioRxiv 2024.05.08.593146, 2024.
+\end{thebibliography}
 
 \end{document}
