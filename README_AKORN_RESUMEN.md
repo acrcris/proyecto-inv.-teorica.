@@ -12,6 +12,8 @@ Estamos integrando el framework AKOrN (ICLR 2025) con tu análisis Kuramoto exis
 
 **Nueva línea**: Usar AKOrN para clasificar MNIST y correlacionar con α_c
 
+**Artículo completo relacionado con esta investigación**: [EstudioAKOrN (PDF)](Latex/EstudioAKOrN.pdf)
+
 ---
 
 ## 🏗️ QUÉ ES AKOrN
